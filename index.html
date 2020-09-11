@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+	<link rel="shortcut icon" href="#_link to .ico" type="image/x-icon" />
+	<title>AssistLnk.com - Find your handyman</title>
+	<meta name="robots" content="index,follow" />
+	<link rel="stylesheet" href="/styles/home.css"/>
+	<script>
+		function loadScriptAsync(src, callback, customAttrs) {
+			var s, r, t;
+			r = false;
+			s = document.createElement('script');
+			s.type = 'text/javascript';
+			s.src = src;
+			s.async = true;
+			if (customAttrs != undefined) {
+				for (var key in customAttrs) {
+					if (customAttrs.hasOwnProperty(key)) {
+						console.log("key::" + key + "@@@val::" + customAttrs[key])
+						s.setAttribute(key, customAttrs[key]);
+					}
+				}
+			}
+
+			if (!r && (!this.readyState || this.readyState == 'complete')) {
+				r = true;
+				//callback!='noCallBack'?callback():"";
+				callback != 'noCallBack' ? s.addEventListener('load', function (e) {
+					callback();
+				}, false) : "";
+			}
+			t = document.getElementsByTagName('script')[0];
+			t.parentNode.insertBefore(s, t);
+		}
+	</script>
+	<script>
+		function loadCSS(href, before, media) {
+			var doc = window.document;
+			var ss = doc.createElement("link");
+			var ref;
+			if (before) {
+				ref = before;
+			} else {
+				var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+				ref = refs[refs.length - 1];
+			}
+			var sheets = doc.styleSheets;
+			ss.rel = "stylesheet";
+			ss.href = href;
+			ss.media = "only x";
+
+			function ready(cb) {
+				if (doc.body) {
+					return cb();
+				}
+				setTimeout(function () {
+					ready(cb);
+				});
+			}
+			ready(function () {
+				ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+			});
+			var onloadcssdefined = function (cb) {
+				var resolvedHref = ss.href;
+				var i = sheets.length;
+				while (i--) {
+					if (sheets[i].href === resolvedHref) {
+						return cb();
+					}
+				}
+				setTimeout(function () {
+					onloadcssdefined(cb);
+				});
+			};
+
+			function loadCB() {
+				if (ss.addEventListener) {
+					ss.removeEventListener("load", loadCB);
+				}
+				ss.media = media || "all";
+				hidePageLoader();
+			}
+			if (ss.addEventListener) {
+				ss.addEventListener("load", loadCB);
+			}
+			ss.onloadcssdefined = onloadcssdefined;
+			onloadcssdefined(loadCB);
+			return ss;
+		};
+
+		function hidePageLoader() {
+			setTimeout(function () {
+				document.getElementById('aslPageLoader').classList.add("fadeout");
+			}, 400);
+			setTimeout(function () {
+				document.getElementById('aslPageLoader').style.display = 'none';
+			}, 800)
+		}
+	</script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+
+	<meta name="layout" content="assistLnkMain" />
+
+	<meta name="description" content="Find your handy services - from electrician to plumber, make-up
+ artist, beautician, tutor etc.." />
+
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"url": "https://www.AssistLnk.com",
+			"name": "AssistLnk",
+			"founders": "Vronra_Shimray,C_Zim_vashai",
+			"foundingDate": "10-09-2020",
+			"foundingLocation": "Ukhrul",
+			"description": "Description of AssistLnk",
+			"logo": "Link_to_logo",
+			"contactPoint": [{
+				"@type": "ContactPoint",
+				"telephone": "+91 1234567890",
+				"email": "support@assistLnk.com",
+				"contactType": "customer service"
+			}],
+			"sameAs": ["https://www.facebook.com/AssistLnk",
+				"https://twitter.com/AssistLnk",
+				"https://www.youtube.com/c/AssistLnk"
+			]
+		}
+	</script>
+	<script>
+		var deviceType = "Desktop";
+	</script>
+</head>
+
+<body>
+	
+	<div class="bodyContainer">
+		
+		<div class='newTopHeader  '>
+			<div class="topHeaderMarginWidth">
+				<a href="index.html" class="display-IB aslLogo">
+					<img src="#_source_to_asl_logo" width="164" alt="AssistLnk-logo" />
+					<span class="logo-menu-arrow"></span>
+				</a>
+				<nav class="seoLinksNav menuContainer-Js">
+					<ul class="navbar categoryNavbar">
+						<li>
+							<a href="javascript:void(0);" class="menuNav">Home Services</a>
+							<ul>
+								<li class="noBorder">
+									<p>Cleaning</p>
+									<a href="#">Fabric sofa shampooing</a>
+									<a href="#">Bathroom Deep cleaning</a>
+									<a href="#">Floor scrubbing and Polishing</a>
+									<a href="#">Home Painting</a>
+									<a href="#">Home Decor</a>
+								</li>
+								
+								<li>
+									<p>Repairing/Installing</p>
+									<a href="#">Carpentry</a>
+									<a href="#">
+									</a>
+									<a href="#">Electrician</a>
+									<a href="#">Plumbing</a>
+									<a href="#">Masonary</a>
+								</li>
+								<li>
+									<p>Beauty</p>
+									<a href="#">Makeup Artist</a>
+									<a href="#">Hair stylist</a>
+									<a href="#">Saloon</a>
+									<a href="#">Nail Arts</a>
+									<a href="#">Facial Cleansing</a>
+								</li>
+
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0);" class="menuNav">Education</a>
+							<ul>
+								<li class="noBorder">
+									<p>School</p>
+									<a href="#">12th Standard Tuition</a>
+									<a href="#">11th Standard Tuition</a>
+									<a href="#">10th Standard Tuition</a>
+									<a href="#">9th StandardTuition</a>
+									<a href="#">8th Standard Tuition</a>
+								</li>
+								<li class="multiColumn">
+									<a href="#">7th Standard Tuition</a>
+									<a href="#">6th Standard Tuition</a>
+									<a href="#">1st-5th Standard Tuition</a>
+									<a href="#">Nursery-LKG-UKG Tuition</a>
+								</li>
+								
+								<li>
+									<p>Subject</p>
+									<a href="#">Mathematics</a>
+									<a href="#">English</a>
+									<a href="#">Science</a>
+									<a href="#">Physics</a>
+									<a href="#">Chemistry</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0);" class="menuNav">Media</a>
+							<ul>
+								<li>
+									<p>Photography/Videography</p>
+									<a href="#">Event Management</a>
+									<a href="#">Content Writing</a>
+									<a href="#">Sound System Hiring</a>
+									<a href="#">Graphics Design</a>
+									<a href="#">Web Design and Development</a>
+								</li>
+								<li>
+									<p>Desktop Publishing</p>
+									<a href="#">Documents/letters/Newsletter printing etc</a>
+									<a href="#">Flex Design & printing</a>
+									<a href="#">Option 1</a>
+									<a href="#">Option 2</a>
+									<a href="#">Option 3</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0);" class="menuNav">Appliances Repair</a>
+							<ul>
+								<li>
+									<p>Home appliances</p>
+									<a href="#">Fan/AC/Cooler</a>
+									<a href="#">Washing Machine</a>
+									<a href="#">Refrigerator</a>
+									<a href="#">Television</a>
+									<a href="#">Option 2</a>
+								</li>
+								<li>
+									<p>Hardware/Software</p>
+									<a href="#">Laptop/Desktop</a>
+									<a href="#">MacOS/Apple Devices</a>
+									<a href="#">Android</a>
+									<a href="#">iOS</a>
+									<a href="#">Software Installations</a>
+								</li>
+								<li>
+									<p>Misc. Repair services</p>
+									<a href="#">Cooler/AC</a>
+									<a href="#">Electric heater</a>
+									<a href="#">option 1</a>
+									<a href="#">Option 2</a>
+									<a href="#">Option 3</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0);" class="menuNav">Hiring services</a>
+							<ul>
+								<li>
+									<p>Media & Entertainment</p>
+									<a href="#">Sound system</a>
+									<a href="#">Music Artist</a>
+									<a href="#">Backup Dnacers</a>
+									<a href="#">Standup comedy</a>
+									<a href="#">Musicians</a>
+								</li>
+								<li>
+									<p>Vehicle Hiring</p>
+									<a href="#">2-wheeler</a>
+									<a href="#">4-Wheeler</a>
+									<a href="#">Luxury Bus</a>
+									<a href="#">Transportation Heavy Truck</a>
+									<a href="#">Pick-up 4X4 Truck</a>
+								</li>
+								<li>
+									<p>Other Hiring services</p>
+									<a href="#">Wedding Hall/Party Hall</a>
+									<a href="#">Option 1</a>
+									<a href="#">Option 2</a>
+									<a href="#">Option 3</a>
+									<a href="#">Option 4</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0);" class="menuNav">Leisure Services</a>
+							<ul>
+								<li>
+									<p>Dance & Music</p>
+									<a href="#">Dance</a>
+									<a href="#">Dirty Dancing</a>
+									<a href="#">Guitar</a>
+									<a href="#">HAO Music</a>
+									<a href="#">Keyboard</a>
+								</li>
+								<li>
+									<p>Hobbies</p>
+									<a href="#">Yoga</a>
+									<a href="#">Cooking</a>
+									<a href="#">Photography</a>
+									<a href="#">Drawing</a>
+									<a href="#">Painting</a>
+								</li>
+								<li>
+									<p>Other Hobbies</p>
+									<a href="#">Singing</a>
+									<a href="#">Violin</a>
+									<a href="#">Piano</a>
+									<a href="#">Makeup</a>
+									<a href="#">Handwriting</a>
+								</li>
+								
+							</ul>
+						</li>
+					</ul>
+					<img src="/assets/icons/search-circle-sharp.png" width="28px" height="28px"
+						class="search-header menuHoverIcon" />
+					<span class="hamburgerContainer menuHoverIcon"><span class="hamburgerMenuIcon"></span></span>
+				</nav>
+			</div>
+		</div>
+		<div class="searchHeaderOverlay">
+		</div>
+		<div class="leftNavigationSeo menuContainer-Js headerRightStickyNav navigationLinkForUser">
+
+			<div class="menuNavigationLinks">
+				<p class="locationInMenu">Location <span class="headerCityName">Set your Location</span></p>
+				<a href="login.html" absolute="true">Login</a>
+				
+				<a href="#">Write a Review</a>
+				<a href="#" absolute="true">All Categories</a>
+
+
+				<a href="#" target="_blank">Help Center</a>
+
+			</div>
+
+			<div class="menuFooter">
+				<a href="#" class="postNeedNavButton"
+					absolute="true">Tell us your<span> needs</span> and requirements.</a>
+
+				<a href="#" id="134847"
+					pageTracking="true" class="signUpNavButton" absolute="true">Signup<span> as</span>
+					Professional/Service Provider</a>
+
+			</div>
+		</div>
+		<div class="locationSearchHeader menuContainer-Js headerRightStickyNav">
+			<div class="searchCategoryHeaderContainer">
+				<span class="transformIconHolder menuHoverIcon closeNav"><span class="closeIcon"></span></span>
+				<input type="text" class="searchCategoryHeader locationHeaderAutocomplete"
+					placeholder="Search for your City" />
+				<span class="searchIconHeaderTxt"></span>
+				<span class="closeSearchHeader">&#10005;</span>
+			</div>
+			<div class="locationSearchResult">
+
+			</div>
+			<div class="popularLocation">
+				<p>Popular Cities/Towns</p>
+				<a href="javascript:void(0);">Imphal</a>
+				<a href="javascript:void(0);">Ukhrul</a>
+				<a href="javascript:void(0);">Shillong</a>
+				<a href="javascript:void(0);">Guwahati</a>
+				<a href="javascript:void(0);">Aizawl</a>
+				<a href="javascript:void(0);">Gangtok</a>
+				<a href="javascript:void(0);">Kohima</a>
+				<a href="javascript:void(0);">Dimapur</a>
+				<a href="javascript:void(0);">Dispur</a>
+				<a href="javascript:void(0);">Itanagar</a>
+				<a href="javascript:void(0);">Siliguri</a>
+				<a href="javascript:void(0);">Darjeeling</a>
+				<a href="javascript:void(0);">Thoubal</a>
+			</div>
+		</div>
+
+		<div class="searchNavigationHeader menuContainer-Js headerRightStickyNav">
+			<div class="searchCategoryHeaderContainer">
+				<span class="transformIconHolder menuHoverIcon closeNav"><span class="closeIcon"></span></span>
+				<input type="text" class="searchCategoryHeader searchHeaderAutocomplete"
+					placeholder="Search for categories,services etc." />
+				<span class="searchIconHeaderTxt"></span>
+				<span class="closeSearchHeader">&#10005;</span>
+			</div>
+			<div class="searchHeaderResult">
+
+			</div>
+
+			<div class="popularCategory">
+				<p>Popular Services</p>
+				<a href="#">Vehicle Hiring</a>
+				<a href="#">Makeup Artist</a>
+				<a href="#">Television Repairs</a>
+				<a href="#">Carpentry</a>
+				<a href="#">Plumbing</a>
+				<a href="#">Photographer</a>
+				<a href="#">Content Writer</a>
+				<a href="#">Electrician</a>
+				<a href="#">Mobile Repair</a>
+				<a href="#">Pianist</a>
+				<a href="#">KungFU</a>
+			</div>
+
+			<form method="POST" action="#" class="searchHeaderForm">
+				<input type="hidden" name="uniqueId" class="searchUniqueId" />
+			</form>
+		</div>
+		<div class="clearfix clearLeft" style="width:100% !important;">
+
+			<div class=' fullWidthPageWithTransparentHeader clearfix'>
+
+				<div class="">
+
+					<!-- body begins here -->
+
+					<div class="pageTopSection">
+						<div class="pageTopContainer">
+							<div class="pageBgMask">
+
+								<div class="pageBgBackground" style="background-image: url('/assets/home/main-bg.jpg')">
+								</div>
+
+								<div class="pageBgOverlay"></div>
+							</div>
+							<div class="pageTopContent">
+								<span class="closeSearchInput">&#10005;</span>
+								<p class="mobileFocusTxt">Need experts to fix things?<br />You've come to the right
+									place!</p>
+								<h1 class="formTitle">Find your desired expert from 1000+ verified professionals.</h1>
+								<form action="#" method="get"
+									id="form" class="formContainer clearfix">
+									<div>
+										<input id="keyword" type="text"
+											class="categoryEventService formSearchInput topicAutoSuggest categoryLoader"
+											name="category"
+											placeholder="Enter categories e.g. Plumber, Makeup Artist, Music Artist" />
+										<input type="hidden" name="source" id="source" value="NEW_HOMEPAGE">
+										<input id="uniqueId" type="hidden" name="uId" value="" />
+										<input type="hidden" name="fromPage" value="/">
+										<input type="hidden" name="catEntered" id="catEntered" value="">
+										<input type="hidden" name="enableSearchFlow" id="enableSearchFlow" value="true">
+										<input type="button" value="Find Now" class="formInputBtn homeSrchBtn" />
+									</div>
+									<input type="button" value="Find Tutors"
+										class="formInputBtn none findTutorMobBtn" />
+									<p class="errorMsg emptyErr">You haven't selected experts or category. Please
+										select one.</p>
+									<p class="errorMsg noCategory">No matching category found.</p>
+									<p class="errorMsg invalidErr">Enter a valid category.</p>
+								</form>
+								<div class="aslStats">
+									<span><span class="aslstatCt">10,000+</span> <span>Verified</span> Experts </span>
+									<span><span class="aslstatCt">1 Lakh+</span> satisfied Customers</span>
+									<span><span class="aslstatCt">1 Lakh+</span> Reviews</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pageLayoutContainer">
+						<h2 class="pageTitle categTitle">Choose from 1000+ categories</h2>
+						<div class="categorySlider aslSlider">
+							<div class="scrollingContainer aslCarouselContainer">
+								<div class="aslCarouselWrapper">
+									<span class="categoryNextButton aslCarouselNext sliderControl"></span>
+									<span class="categoryPrevButton aslCarouselPrev sliderControl"></span>
+
+									<div class="homePageCat aslCarouselContent">
+										<div class="categContainer">
+											<img src="/assets/GIF/loader_init.gif"
+												data-src="/assets/home/home-repair.jpg"
+												class="lazyImage not-loaded-spinner" /> 
+											<div class="moreDivCat">
+												<a class="categNameMob homapageNavigationLinkItem"
+													data-TopicId="48">Home Repairs</a>
+												<a class="homapageNavigationLinkItem" data-TopicId="1426">
+													<span>Home Paints</span>
+												</a>
+												<a class="homapageNavigationLinkItem" data-TopicId="449">
+													<span>Ceiling Repair/Installation</span>
+												</a>
+												<a class="homapageNavigationLinkItem" data-TopicId="381"><span>Carpentry</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="364"><span>Electrician</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="444"><span>Masonary</span></a>
+												<!--<a class="homapageNavigationLinkItem" data-TopicId="444"><span>Carpentry</span></a> -->
+												<a class="homapageNavigationLinkItem" data-TopicId="48"><span>View
+														more</span></a>
+											</div>
+										</div>
+										<a class="categName homapageNavigationLinkItem" data-TopicId="48">Home Repairs</a>
+									</div>
+
+									<div class="homePageCat aslCarouselContent">
+										<div class="categContainer">
+
+											<img src="/assets/GIF/loader_init.gif"
+												data-src="/assets/home/appli-repair.jpg"
+												class="lazyImage not-loaded-spinner" />
+
+											<div class="moreDivCat">
+												<a class="categNameMob homapaEducation
+													data-TopicId="334">Appliances Repair</a>
+												<a class="homapageNavigationLinkItem" data-TopicId="2260"><span>Television</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="2259"><span>Refregirator</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="2258"><span>Fan/AC/Cooler</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="2257"><span>Oven/Toaster/Electric Kettle</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="189"><span>SmartPhones/Laptop/PC/MacBook</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="334"><span>View
+														more</span></a>
+											</div>
+										</div>
+										<a class="categName homapageNavigationLinkItem" data-TopicId="334">Appliances Repair</a>
+									</div>
+
+									<div class="homePageCat aslCarouselContent">
+										<div class="categContainer">
+											<img src="/assets/GIF/loader_init.gif"
+												data-src="/assets/home/edu.jpg"
+												class="lazyImage not-loaded-spinner" />
+											<div class="moreDivCat">
+												<a class="categNameMob homapageNavigationLinkItem" data-TopicId="258">Education</a>
+												<a class="homapageNavigationLinkItem" data-TopicId="390"><span>12th Standard Tuition</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="434"><span>10th Standard Tuition</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="310"><span>11th Standard Tuition</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="309"><span>5th-9th Standard Tuition</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="408"><span>Mathematics</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="258"><span>View
+														more</span></a>    
+											</div>
+										</div>
+										<a class="categName homapageNavigationLinkItem" data-TopicId="258">Education</a>
+									</div>
+
+									<div class="homePageCat aslCarouselContent">
+										<div class="categContainer">
+											<img src="/assets/GIF/loader_init.gif"
+												data-src="/assets/home/video.jpg"
+												class="lazyImage not-loaded-spinner" />
+											<div class="moreDivCat">
+												<a class="categNameMob homapageNavigationLinkItem"
+													data-TopicId="140">Media & Entertainment</a>
+												<a class="homapageNavigationLinkItem" data-TopicId="67"><span>Photographer/Videographer</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="68"><span>Graphics Designer</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="70"><span>Web Design/Development</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="69"><span>Music Artist</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="73"><span>StandUp Comedian</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="140"><span>View
+														more</span></a>
+											</div>
+										</div>
+										<a class="categName homapageNavigationLinkItem" data-TopicId="140">Media & Entertainment</a>
+									</div>
+
+									<div class="homePageCat aslCarouselContent">
+										<div class="categContainer">
+											<img src="/assets/GIF/loader_init.gif"
+												data-src="/assets/home/beauty.jpg"
+												class="lazyImage not-loaded-spinner" />
+											<div class="moreDivCat">
+
+												<a class="categNameMob homapageNavigationLinkItem"
+													data-TopicId="75">Beauty</a>
+												<a class="homapageNavigationLinkItem" data-TopicId="81"><span>Makeup Artist</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="77"><span>Hair Stylist</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="511"><span>Fitness Trainer</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="85"><span>Facial Cleanse</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="136"><span>Beauty Products</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="75"><span>View more</span></a>
+											</div>
+										</div>
+										<a class="categName homapageNavigationLinkItem" data-TopicId="75">Beauty</a>
+									</div>
+
+									<div class="homePageCat aslCarouselContent">
+										<div class="categContainer">
+											<img src="/assets/GIF/loader_init.gif"
+												data-src="/assets/home/hiring.jpg"
+												class="lazyImage not-loaded-spinner" />
+											<div class="moreDivCat">
+												<a class="categNameMob homapageNavigationLinkItem"
+													data-TopicId="20">Hiring</a>
+												<a class="homapageNavigationLinkItem" data-TopicId="24"><span>Mini Truck</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="556"><span>PickUp Truck</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="36"><span></span>2 Wheeler</a>
+												<a class="homapageNavigationLinkItem" data-TopicId="23"><span>4 Wheeler</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="33"><span>Heavy Duty Truck</span></a>
+												<a class="homapageNavigationLinkItem" data-TopicId="20"
+													class="categName"><span>View more</span></a>
+											</div>
+										</div>
+										<a class="categName homapageNavigationLinkItem" data-TopicId="20"
+											class="categName">Hiring</a>
+									</div>
+
+									<div class="homePageCat aslCarouselContent">
+										<div class="categContainer">
+											<img src="/assets/GIF/loader_init.gif"
+												data-src="/assets/home/fitness.jpg"
+												class="lazyImage not-loaded-spinner" />
+											<div class="moreDivCat">
+												<div class="exploreCat">
+													<p><span>Not Listed here yet?</span></p>
+													<a href="#"
+														class="loud mt-0"><span>Post your requirement</span></a>
+												</div>
+											</div>
+										</div>
+										<a href="#"
+											class="categName">Explore 1000+ Categories</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="pageLayoutContainer textAlignCen" id="homeHowItWorks">
+						<h2 class="pageTitle">How AssistLnk fulfill your needs</h2>
+
+						<div class="howItWrkSteps">
+							<span class="indStep activeStep">
+								<span class="stepNum">1</span>
+								<span class="hwStepTxt">Post</span>
+							</span>
+							<span class="stepLine"></span>
+							<span class="indStep">
+								<span class="stepNum">2</span>
+								
+								<span class="hwStepTxt getResTxt">Get responses</span>
+							</span>
+							<span class="stepLine"></span>
+							<span class="indStep">
+								<span class="stepNum">3</span>
+								<span class="hwStepTxt">Finalise</span>
+							</span>
+						</div>
+
+						<div>
+							<div class="homeHowWorks">
+								<img src="/assets/GIF/loader_init.gif"
+									data-src="/assets/icons/how1.png"
+									class="lazyImage not-loaded-spinner" />
+								<p class="hwTitle">Tell us your requirement</p>
+								<p class="hwDesc">Not listed in our site? Just enter<br />details such as appliances or
+									category,<br />locality and preference.</p>
+							</div>
+
+							<div class="homeHowWorks">
+								<img src="/assets/GIF/loader_init.gif"
+									data-src="/assets/icons/how2.png"
+									class="lazyImage not-loaded-spinner" />
+								<p class="hwTitle">Get customised responses</p>
+								<p class="hwDesc">Based on your requirement you will start<br />getting customised
+									responses from Experts and<br /> service providers.</p>
+							</div>
+
+							<div class="homeHowWorks">
+								<img src="/assets/GIF/loader_init.gif"
+									data-src="/assets/icons/how3.png"
+									class="lazyImage not-loaded-spinner" />
+								<p class="hwTitle">Compare &amp; select the best</p>
+								<p class="hwDesc">Once you get responses, you can<br />compare them and choose the ones
+									that<br />fit your requirements.</p>
+							</div>
+						</div>
+
+						<p class="howWrkUpTxt only-for-big">AssistLnk.com is NorthEast India's largest online platform with a 
+							network of most trusted and verified Experts and service providers.<br/> Post your requirements and 
+							connect with Experts and service providers in your locality.</p>
+						</p>
+
+						<div class="postLinkBlck">
+							<a href="#"
+								class="primaryButton postReqHwWrk">Tell us your requirements</a>
+						</div>
+
+					</div>
+
+					<div class="assistLnkOverlay needOverlay"></div>
+
+					<div class="downloadAppBlock">
+						<h2 class="pageTitle textAlignCen mb-20">Our Apps are coming soon on Google play Store  & Apple AppStore</h2>
+						<p class="pageSubTitle textAlignCen">Search, Shortlist & Contact Experts,Service providers on the go</p>
+						<ul class="downloadIcons textAlignCen mt-25">
+							<li>
+								<a href="#"
+									target="_blank"><img class="playStore-redirect"
+										src="/assets/icons/android-link.png"
+										alt="Play Store"></a>
+							</li>
+							<li>
+								<a href="#"
+									target="_blank"><img class="appStore-redirect"
+										src="/assets/icons/ios-link.png"
+										alt="App Store"></a>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="pageLayoutContainer tutorBlock">
+						<div>
+							<h2 class="pageTitle">Are you an Experts/Service provider?</h2>
+							<p class="teachSucTxt">Join AssistLnk.com and connect with more than 40 Lakh customers on the
+								platform. Create a strong profile portfolio and grow your network and business.</p>
+							<a href="#"
+								class="primaryButton signupButton">Signup as an Expert/Service provider</a>
+						</div>
+						<img src="#"
+							data-src="/assets/home/network.png"
+							class="lazyImage not-loaded-spinner" />
+					</div>
+
+					
+					<!-- body ends here -->
+				</div>
+			</div>
+		</div>
+		<hr/>
+		<div class="footernew">
+			<div class="footerMarginWidth">
+				<div class="footerNSocial clearfix">
+					<ul class="footermenuhori floatLeft">
+						<li>
+
+							<a href="#">About AssistLnk.com</a>
+
+						</li>
+						<li>
+
+							<a href="#">Terms of Use</a>
+
+						</li>
+						<li>
+							<a href="#">Privacy Policy</a>
+
+						</li>
+					</ul>
+					<ul class="footer-social" itemscope itemtype="http://schema.org/Organization">
+						<span itemprop="name" class="none">AssistLnk</span>
+						<link itemprop="url" href="index.html" />
+						<img itemprop="logo" class="none" src="#AssistLnk-logo_source" />
+
+						<li><a itemprop="sameAs" href="#" target="_blank">
+								<span class="icon-facebook-square"></span></a></li>
+						<li><a itemprop="sameAs" href="#" target="_blank">
+								<span class="icon-twitter"></span></a>
+						</li>
+					</ul>
+				</div>
+				<ul class="footermenuhori hideForListingBlock">
+					<li><a href="#">Shillong</a></li>
+					<li><a href="#">Guwahati</a></li>
+					<li><a href="#">Imphal</a></li>
+					<li><a href="#">Aizawl</a></li>
+					<li><a href="#">Dimapur</a></li>
+					<li><a href="#">Kohima</a></li>
+					<li><a href="#">Dispur</a></li>
+					<li><a href="#">Itanagar</a></li>
+					<li><a href="#">Ukhrul</a></li>
+					<li><a href="#">Darjeeling</a></li>
+					<li><a href="#">Siliguri</a></li>
+					<li><a href="#">Agartala</a></li>
+				</ul>
+
+				<p class="footerUpTxt hideForListingBlock ">AssistLnk.com is NorthEast India&#x00027;s largest network of verified Professionals
+					and trusted service providers. Over 10+ lakh students,homeowners and businesses rely on AssistLnk.com, to fulfill their
+					requirements across 1,000+ categories. Using AssistLnk.com, students,homeowners and business dealers can compare
+					multiple service providers and professionals and choose the one that best suits their requirements. <span
+						class="readmoreTxt"> More than 1.6+ lakh verified Experts/Professionals and service providers are helping millions of
+						people every day and growing their business and portfolio on AssistLnk.com. Whether you are looking
+						for any appliances repair, a carpenter, a makeup artist, a tutor, a professional photographer, or hire a vehicle,
+						we have got the best selection of Experts/Professionals and
+						Service providers for you.</span> <span class="showFooterTxt" data-type="more">Read
+						more</span></p>
+				<div class="footer-copyright">AssistLink Group &copy; 2019-2020 All Rights Reserved</div>
+			</div>
+
+		</div>
+		<div class="d-cont-foot" style="text-decoration:none !important;">
+		</div>
+		<script type="text/javascript">
+			loadScriptAsync("/js/homejs.js", 'noCallBack');
+		</script>
+</body>
+</html>
