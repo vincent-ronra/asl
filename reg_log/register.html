@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"/> 
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+<link rel="shortcut icon" href="https:LinkTOLogo.ico" type="image/x-icon" />
+<title>
+	Professionals,Experts,Tradesmen,Artist, Service providers etc
+</title>
+<meta name="description" content="Register yourself as a service provider or individual " />
+<link rel="styleSheet" href="styles.css"/>
+<head>
+<script>
+	function loadCSS(href, before, media) {
+		var doc = window.document;
+		var ss = doc.createElement("link");
+		var ref;
+		if (before) {
+			ref = before;
+		} else {
+			var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+			ref = refs[refs.length - 1];
+		}
+		var sheets = doc.styleSheets;
+		ss.rel = "stylesheet";
+		ss.href = href;
+		ss.media = "only x";
+
+		function ready(cb) {
+			if (doc.body) {
+				return cb();
+			}
+			setTimeout(function () {
+				ready(cb);
+			});
+		}
+		ready(function () {
+			ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+		});
+		var onloadcssdefined = function (cb) {
+			var resolvedHref = ss.href;
+			var i = sheets.length;
+			while (i--) {
+				if (sheets[i].href === resolvedHref) {
+					return cb();
+				}
+			}
+			setTimeout(function () {
+				onloadcssdefined(cb);
+			});
+		};
+
+		function loadCB() {
+			if (ss.addEventListener) {
+				ss.removeEventListener("load", loadCB);
+			}
+			ss.media = media || "all";
+			hidePageLoader();
+		}
+		if (ss.addEventListener) {
+			ss.addEventListener("load", loadCB);
+		}
+		ss.onloadcssdefined = onloadcssdefined;
+		onloadcssdefined(loadCB);
+		return ss;
+	};
+
+	function hidePageLoader() {
+		setTimeout(function () {
+			document.getElementById('upPageLoader').classList.add("fadeout");
+		}, 400);
+		setTimeout(function () {
+			document.getElementById('upPageLoader').style.display = 'none';
+		}, 800)
+	}
+</script>
+</head>
+<body>
+	<div class="bodyContainer">
+
+		<div class='dummyHeader'>
+		</div>
+
+		<div class='newTopHeader  seoPage'>
+			<div class="topHeaderMarginWidth">
+
+				<a href="https://www.assistLnk.com/" class="display-IB upLogo">
+					<img src="assistLnk-logo.svg"
+						width="164" alt="AssistLnk-logo"/>
+					<span class="logo-menu-arrow"></span>
+				</a>
+				<nav class="seoLinksNav menuContainer-Js">
+					<span class="hamburgerContainer menuHoverIcon"><span class="hamburgerMenuIcon"></span></span>
+				</nav>
+			</div>
+		</div>
+		<div class="searchHeaderOverlay">
+		</div>
+		<div class="leftNavigationSeo menuContainer-Js headerRightStickyNav navigationLinkForUser">
+			<div class="menuNavigationLinks">
+				<p class="locationInMenu">Location <span class="headerCityName">Set your Location</span></p>
+				<a href="https://www.assistLnk/login" absolute="true">Login</a>
+				<a href="#">Write a Review</a>
+				<a href="#" absolute="true">All Categories</a>
+				<a href="#" target="_blank">Help Center</a>
+			</div>
+			<div class="menuFooter">
+				<a href="#" class="postNeedNavButton"
+					absolute="true">Tell<span> us your</span> requirements.</a>
+				<a href="#" id="134847"
+					pageTracking="true" class="signUpNavButton" absolute="true">Signup as<span> an Expert</span>/Professional/Service provider</a>
+			</div>
+		</div>
+		<div class="locationSearchHeader menuContainer-Js headerRightStickyNav">
+			<div class="searchCategoryHeaderContainer">
+				<span class="transformIconHolder menuHoverIcon closeNav"><span class="closeIcon"></span></span>
+				<input type="text" class="searchCategoryHeader locationHeaderAutocomplete"
+					placeholder="Search for your City" />
+				<span class="searchIconHeaderTxt"></span>
+				<span class="closeSearchHeader">&#10005;</span>
+			</div>
+			<div class="locationSearchResult">
+
+			</div>
+			<div class="popularLocation">
+				<p>Popular Cities</p>
+				<a href="javascript:void(0);">Shillong</a>
+				<a href="javascript:void(0);">Imphal</a>
+				<a href="javascript:void(0);">Guwahati</a>
+				<a href="javascript:void(0);">Dispur</a>
+				<a href="javascript:void(0);">Tura</a>
+				<a href="javascript:void(0);">Kohima</a>
+				<a href="javascript:void(0);">Siliguri</a>
+				<a href="javascript:void(0);">Darjeeling</a>
+				<a href="javascript:void(0);">Aizawl</a>
+				<a href="javascript:void(0);">Dimapur</a>
+				<a href="javascript:void(0);">Ukhrul</a>
+			</div>
+		</div>
+
+
+		<div class="searchNavigationHeader menuContainer-Js headerRightStickyNav">
+			<div class="searchCategoryHeaderContainer">
+				<span class="transformIconHolder menuHoverIcon closeNav"><span class="closeIcon"></span></span>
+				<input type="text" class="searchCategoryHeader searchHeaderAutocomplete"
+					placeholder="What do you want to learn?" />
+				<span class="searchIconHeaderTxt"></span>
+				<span class="closeSearchHeader">&#10005;</span>
+			</div>
+			<div class="searchHeaderResult">
+
+			</div>
+			<form method="POST" action="#" class="searchHeaderForm">
+				<input type="hidden" name="uniqueId" class="searchUniqueId" />
+			</form>
+		</div>
+		<div class="clearfix clearLeft" style="width:100% !important;">
+
+
+			<div class=' fullWidthPageWithTransparentHeader clearfix'>
+
+				<div class="">
+
+					<!-- body begins -->
+
+
+					<input type="hidden" id="enableGoogleAutocomplete" class="googlelocationKey"
+						value="AIzaSyAhGS1aN4qAE1D7hMyutp3EnfZ0ztXccZc">
+
+					<div class="pageTopSection">
+
+						<div class="pageTopContainer">
+							<div class="pageBgMask ">
+
+								<div class="pageBgBackground"
+									style="background-image: url('placeholder.png')">
+								</div>
+
+
+								<div class="" id="createProfilePage">
+									<div class="pageTopContent mainSignUpPage " style="margin: 0 auto;">
+										<span class="closeSearchInput">&#10005;</span>
+										<div class="createProfile" style="margin: 7px auto;">
+											<h1 class="headerTitle">Register your service/Business</h1>
+											<input type="hidden" id="allowLocalityForInternational" value="true" />
+
+											<div class="signup-cont-body detailedLoc">
+												<form action="#" method="post"
+													class="signupForm" autocomplete="off">
+
+													<input type="hidden" name="newUIEnroll" value="true" />
+													<input type="hidden" name="type" value="TRAINER" />
+													<input type="hidden" name="flowType" value="NEW_FLOW_REVAMP" />
+													<input type="hidden" name="facebookUserId" value="" />
+
+
+													<div class="input-control">
+														<div class="inputField providerRadio">
+															<label
+																class="greenRadioContainer alignRadioLeft display-IB radiolabel">
+																<span class="spanRadioText"> I am an Individual </span>
+																<input type='radio' name="provider.type"
+																	value="INDIVIDUAL" checked="checked" />
+																<span class="floatLeft radioTopmargin"></span>
+															</label>
+														</div>
+														<div class="inputField providerRadio"
+															style="margin-left: 3%;margin-bottom: 0;">
+															<label
+																class="greenRadioContainer alignRadioLeft display-IB radiolabel">
+																<span class="spanRadioText">I'm a service provider</span>
+																<input type='radio' name="provider.type"
+																	value="COMPANY" />
+																<span class="floatLeft radioTopmargin"></span>
+															</label>
+														</div>
+													</div>
+
+													<div class="input-control" id="name1">
+														<input type="text" name='fullName' value=""
+															placeholder="Enter your Full name Eg: Matthew Zimik"
+															class="inputField   " />
+													</div>
+													<div class="input-control none" id="instituteName1">
+														<input type="text" name='instiName' class="inputField "
+															placeholder="Business name. Eg: Haoyap Enterprise" value="" />
+													</div>
+													<div class="input-control none" id="name2">
+														<input type="text" name='contactNameBusiness' value=""
+															placeholder="Owner's Name"
+															class="inputField   " />
+													</div>
+													<div class="input-control">
+														<input type="text" id="username" name='username'
+															placeholder="Enter your Email Eg: avi@gmail.com"
+															data-indEmail="Enter your Email Eg: avi@gmail.com"
+															data-insEmail="Enter your Email Eg: haoyap@gmail.com" value=""
+															class="inputField " />
+														<p class="errorText"></p>
+													</div>
+													<div class="input-control" style="position:relative;">
+														<div class="displayFlex">
+															<select name="countryId" id="countryId"
+																class="inputField phoneCode countryIdChnge">
+																<option value="">- Select -</option>
+															</select>
+															<span id="result">&nbsp;</span>
+															<input type="number" name="MOBILE"
+																placeholder="Enter your Mobile Number" maxlength="10"
+																value="" title=""
+																class="inputField phoneNumberValue onlyNumber " />
+														</div>
+														<p class="errorText"></p>
+													</div>
+
+													<div class="input-control genderDiv">
+														<select class="genderlabl " type="text" name="trainer.gender">
+															<option disabled selected value="Select"><span
+																	style="color: #323639;">Select Gender</span>
+															</option>
+															<option value="MALE">Male</option>
+															<option value="FEMALE">Female</option>
+															<option value="Other">Other</option>
+														</select>
+													</div>
+
+													<input id="uniqueId" type="hidden" name="uId" value="" />
+													<div class="input-control">
+														<input id="newProviderSignUpFlow" type="text"
+															style="box-shadow: none;"
+															class="categoryEventService inputField topicAutoSuggest categoryLoader "
+															value="" name="catName"
+															placeholder="Enter the main category you Teach, more could be added later"
+															autocomplete="OFF" />
+														<p class="errorText"></p>
+													</div>
+													<div class="input-control pos-rel geoLocContainer"
+														id="locationAutoComplete">
+														<input type="textbox" value=""
+															placeholder="Enter your street or location name"
+															data-indPin="Enter your street or location name"
+															data-insPin="Enter your street or location name" title=""
+															autocomplete="OFF"
+															class="localityAndPincodeAutoSuggest googleLocality inputField "
+															style="padding: 0 76px 0 5px!important;box-sizing: border-box;width: 98%;" />
+														<div class="useMyCurrentLocation pointer">
+															<span class="icon-findme2x locateIcon"
+																id="locateIcon"></span><span>Locate</span>
+														</div>
+														<input type="hidden" value="" name="googleLocalityApiObject"
+															class="googleLocalityApiObject" />
+														<input type="hidden" value="" name="latitude" id="latitude" />
+														<input type="hidden" value="" name="longitude" id="longitude" />
+														<p class="errorText"></p>
+													</div>
+
+													<div class="input-control" id="pincodeBlock">
+														<input type="text" id="pincode" name="pin" value=""
+															placeholder="Enter Pincode or Locality Eg: 795142 or Zingmung Nagar"
+															data-indPin="Enter Pincode or Locality Eg: 795142 or Zingmung Nagar"
+															data-insPin="Enter Main Branch Pincode or Locality" title=""
+															autocomplete="OFF"
+															class="inputField  localityAndPincodeAutoSuggest customLocality" />
+														<p class="errorText"></p>
+													</div>
+
+													<div class="forDetailedLocation textAlignLeftOnly none">
+														<div class="locationHead ml-4">
+															<span class="locationIcon"><img
+																	src="location.png" /></span>
+															<span>Selected Location</span>
+														</div>
+														<ul class="ml-4"></ul>
+													</div>
+													<div class="input-control mt-15 mb-10">
+														<p class="center"><input type="submit" value="Create Profile"
+																alt="Log In" class="newBtn primaryButton submitBtn"
+																style="width: 98%;line-height:30px;font-size: 16px;text-transform: none;" />
+														</p>
+													</div>
+													<p>Or</p>
+													<div class="input-control mt-15 mb-10"
+														style="width:97%;margin-left: 4px;">
+														<a href="#" class="fbCont"
+															onClick="JavaScript:fbLogin();return true;">
+															<div class="fbLogin">
+																<p class="newBtn primaryButton fbBtn"><img
+																		src="fb-logo.png"
+																		class="fbIcon" /><span
+																		class="btnText loud">Signup with Facebook</span>
+																</p>
+															</div>
+														</a>
+													</div>
+
+													<p class="signupTxt" style="font-size: 12px; line-height: 1.5;">
+														By Signing Up, you agree to our
+														<a href="#terms of use"
+															target="_blank"><span
+																style="font-size: 12px; line-height: 1.5;color: #0072ff">Terms
+																of Use</span></a>
+														&
+														<a href="#Privacy_Policy"
+															target="_blank"><span
+																style="font-size: 12px; line-height: 1.5;color: #0072ff">Privacy
+																Policy</span></a>
+													</p>
+											</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pageBottomSection">
+
+					<div class="pageLayoutContainer textAlignCen" id="homeHowItWorks" style="margin-top: 118px;">
+						<div class="homehowUpBlock">
+							<div class="tablecell">
+								<span class="numbers">30+ lakhs</span><br><span class="belowTxt">Customers</span>
+							</div>
+							<div class="tablecell stats">
+								<span class="line"></span>
+							</div>
+							<div class="tablecell">
+								<span class="numbers">2+ lakhs</span><br><span class="belowTxt"><span
+										class="verified">Verified</span>Experts & Service Providers</span>
+							</div>
+							<div class="table cell stats">
+								<span class="line"></span>
+							</div>
+							<div class="tablecell">
+								<span class="numbers">1+ lakhs</span><br><span class="belowTxt">Customer's Reviews</span>
+							</div>
+						</div>
+
+						<div class="howitWorksDemo">
+							<div class="tablecell demoTablecell videoCell" style="width: 57%;position: relative;">
+								<br />
+								<img src="https://c.urbanpro.com/assets/homePage/Howitworks-ab6e57d0f71db9f1f53c957119e19634.jpg"
+									data-video="//www.youtube.com/embed/jVP6DKZ4hes?autoplay=1"
+									class="video videoHolder">
+								<div class="playBtn fixed videoHolder">
+									<img src="https://c.urbanpro.com/assets/homePage/play-ae4fddb5ec17fb6121c981d0fb171307.png"
+										class="playImage" />
+								</div>
+							</div>
+							<div class="tablecell demoTablecell"
+								style=";margin:0;padding-right:40px;vertical-align: middle;">
+								<h2 class="pageTitle" style="text-align: left;font-weight: 600;margin-left: 8px;">How AssistLnk Works</h2>
+								<ul>
+									<li class="rowMargin">
+										<p class="paraText"><span style="font-weight: 600;">Create Free Profile:</span>
+											Upload Photos, Videos, Portfolio, Achievements to help
+											customers discover you in your chosen categories or Expertise/service.</p>
+									</li>
+
+									<li class="rowMargin">
+										<p class="paraText"><span style="font-weight: 600;">Connect with
+											Customers:</span> Respond to queries or search for prospective customers
+											closest to your locations of interest.</p>
+									</li>
+
+									<li>
+										<p class="paraText"><span style="font-weight: 600;">Grow your Business:</span>
+											Rank higher in search results by enriching your profile, assigning Practice
+											or Mock Tests and inviting your students to write reviews for you.</p>
+									</li>
+								</ul>
+								<a href="#">
+									<input type="button" class="primaryButton openForm" value="Signup as a Tutor"
+										style="float:left;margin: 32px 32px 0;font-size: 16px; font-weight: 600;letter-spacing: 0.1px;text-transform: none;padding:12px 32px;" /></a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- <script type="text/javascript">
+					var facebookAppId = 15998899160121;
+					var facebookAuthNextUrl = 'https://www.assistLnk.com/newRegister/enrollMember';
+					var googleLocality = false;
+				</script> -->
+				<script type="text/javascript"
+					src="signup.js">
+				</script>
+				<!-- body ends here-->
+			</div>
+		</div>
+	</div>
+<hr/>
+	<div class="footernew">
+		<div class="footerMarginWidth">
+			<div class="footerNSocial clearfix">
+				<ul class="footermenuhori floatLeft">
+					<li>
+						<a href="#">About  AssistLnk.com</a>
+					</li>
+					<li>
+						<a href="#">Terms of Use</a>
+					</li>
+					<li>
+						<a href="#">Privacy Policy</a>
+					</li>
+				</ul>
+				<ul class="footer-social" itemscope itemtype="http://schema.org/Organization">
+					<span itemprop="name" class="none">AssistLnk</span>
+					<link itemprop="url" href="index.html" />
+					<img itemprop="logo" class="none" src="#AssistLnk-logo_source" />
+
+					<li><a itemprop="sameAs" href="#" target="_blank">
+							<span class="icon-facebook-square"></span></a></li>
+					<li><a itemprop="sameAs" href="#" target="_blank">
+							<span class="icon-twitter"></span></a>
+					</li>
+				</ul>
+			</div>
+			<ul class="footermenuhori hideForListingBlock">
+				<li><a href="#">Shillong</a></li>
+				<li><a href="#">Guwahati</a></li>
+				<li><a href="#">Imphal</a></li>
+				<li><a href="#">Aizawl</a></li>
+				<li><a href="#">Dimapur</a></li>
+				<li><a href="#">Kohima</a></li>
+				<li><a href="#">Dispur</a></li>
+				<li><a href="#">Itanagar</a></li>
+				<li><a href="#">Ukhrul</a></li>
+				<li><a href="#">Darjeeling</a></li>
+				<li><a href="#">Siliguri</a></li>
+				<li><a href="#">Agartala</a></li>
+			</ul>
+
+			<p class="footerUpTxt hideForListingBlock ">AssistLnk.com is NorthEast India&#x00027;s largest network of verified Professionals
+				and trusted service providers. Over 10+ lakh students,homeowners and businesses rely on AssistLnk.com, to fulfill their
+				requirements across 1,000+ categories. Using AssistLnk.com, students,homeowners and business dealers can compare
+				multiple service providers and professionals and choose the one that best suits their requirements. <span
+					class="readmoreTxt"> More than 1.6+ lakh verified Experts/Professionals and service providers are helping millions of
+					people every day and growing their business and portfolio on AssistLnk.com. Whether you are looking
+					for any appliances repair, a carpenter, a makeup artist, a tutor, a professional photographer, or hire a vehicle,
+					we have got the best selection of Experts/Professionals and
+					Service providers for you.</span> <span class="showFooterTxt" data-type="more">Read
+					more</span></p>
+			<div class="footer-copyright">AssistLink Group &copy; 2019-2020 All Rights Reserved</div>
+		</div>
+
+	</div>
+	<div class="d-cont-foot" style="text-decoration:none !important;">
+	</div>
+</body>
+</html>
