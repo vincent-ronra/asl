@@ -4,37 +4,6 @@ body {
     margin: 0px;
 }
 
-.upPageLoader {
-    position: fixed;
-    z-index: 100000;
-    background: rgba(255, 255, 255, 0.99);
-    width: 100%;
-    height: 100%;
-    display: none;
-    text-align: center;
-    top: 0px;
-}
-
-.upPageLoaderContainer {
-    position: absolute;
-    margin: auto;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    width: 100px;
-    height: 100px;
-}
-
-#upPageLoader.fadeout {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-name: fadeOut;
-    animation-name: fadeOut;
-}
-
 @-webkit-keyframes fadeOut {
     0% {
         opacity: 1;
@@ -53,34 +22,6 @@ body {
     100% {
         opacity: 0;
     }
-}
-
-.uploaderAnim {
-    position: absolute;
-    box-sizing: border-box;
-    margin-top: 15px;
-    border-radius: 5px;
-    width: 100px;
-    height: 2px;
-    padding: 0px;
-    background: #ccc;
-    overflow: hidden;
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-    transition: -webkit-transform .3s ease-in;
-    transition: transform .3s ease-in;
-    transition: transform .3s ease-in, -webkit-transform .3s ease-in;
-}
-
-.uploaderAnim:before {
-    content: '';
-    position: absolute;
-    border-radius: 5px;
-    width: 30px;
-    height: 3px;
-    left: 0;
-    background: #0072FF;
-    animation: animUploader 1.5s infinite ease-in-out;
 }
 
 @keyframes animUploader {
@@ -142,924 +83,15 @@ a {
     text-decoration: none
 }
 
-.ui-widget {
-    font-family: inherit !important;
-}
+/* @charset "UTF-8"; */
 
-.ui-menu {
-    list-style: none;
-    padding: 2px;
-    margin: 0;
-    display: block;
-    outline: none;
-}
 
-.ui-autocomplete {
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: default;
-}
-
-.ui-autocomplete {
-    border: 1px solid #ddd;
-    background: #fff;
-    color: #333;
-}
-
-.ui-corner-all,
-.ui-corner-bottom,
-.ui-corner-right,
-.ui-corner-br {
-    border-bottom-right-radius: 4px;
-}
-
-.ui-corner-all,
-.ui-corner-bottom,
-.ui-corner-left,
-.ui-corner-bl {
-    border-bottom-left-radius: 4px;
-}
-
-.ui-corner-all,
-.ui-corner-top,
-.ui-corner-right,
-.ui-corner-tr {
-    border-top-right-radius: 4px;
-}
-
-.ui-corner-all,
-.ui-corner-top,
-.ui-corner-left,
-.ui-corner-tl {
-    border-top-left-radius: 4px;
-}
-
-.ui-front {
-    z-index: 999;
-}
-
-.ui-menu .ui-menu-item {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.ui-menu .ui-menu-item a {
-    text-decoration: none;
-    display: block;
-    padding: 2px .4em;
-    line-height: 1.5;
-    min-height: 0;
-    font-weight: normal;
-}
-
-.ui-menu .ui-menu-item a {
-    font-size: 14px;
-    line-height: 35px;
-}
-
-.ui-widget-content a {
-    color: #333;
-}
-
-.searchHeaderResult .ui-menu .ui-menu-item a {
-    font-size: 14px;
-    line-height: 35px;
-}
-
-.ui-state-hover,
-.ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
-.ui-state-focus,
-.ui-widget-content .ui-state-focus,
-.ui-widget-header .ui-state-focus {
-    background-color: rgba(0, 194, 159, 0.2);
-    border: none;
-    font-size: 14px;
-    line-height: 18px;
-    text-align: left;
-    color: #3b3b3b;
-}
-
-.ui-menu .ui-menu-item a.ui-state-focus,
-.ui-menu .ui-menu-item a.ui-state-active {
-    margin: 0px !important;
-    background: #f1f1f1;
-    border: 0px;
-    text-shadow: none;
-    color: #333;
-}
-
-.ui-helper-hidden-accessible {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.ui-widget-overlay {
-    background: #000;
-    opacity: .5;
-    filter: Alpha(Opacity=50);
-    z-index: 999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.ui-button .ui-button-text {
-    display: block;
-    line-height: normal;
-}
-
-.ui-button-icon-only .ui-button-text,
-.ui-button-icons-only .ui-button-text {
-    padding: .4em;
-    text-indent: -9999999px;
-}
-
-@charset "UTF-8";
-
-@font-face {
-    font-family: "urbanpro";
-    src: url("https://c.urbanpro.com/assets/urbanpro.eot");
-    src: url("https://c.urbanpro.com/assets/urbanpro.eot#iefix") format("embedded-opentype"), url("https://c.urbanpro.com/assets/urbanpro.woff") format("woff"), url("https://c.urbanpro.com/assets/urbanpro.ttf") format("truetype"), url("https://c.urbanpro.com/assets/urbanpro.svg#urbanpro") format("svg");
+@font-face{
+    font-family: "ubuntu-medium";
+    src: url("/assets/fonts/Ubuntu/Ubuntu-Medium.ttf");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
-
-[data-icon]:before {
-    font-family: "urbanpro" !important;
-    content: attr(data-icon);
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-    font-family: "urbanpro" !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-ic-back-24-px:before {
-    content: "\61";
-}
-
-.icon-star:before {
-    content: "\63";
-}
-
-.icon-home2x:before {
-    content: "\64";
-}
-
-.icon-findme2x:before {
-    content: "\65";
-}
-
-.icon-ic-accounts-24-px:before {
-    content: "\66";
-}
-
-.icon-ic-admin-24-px:before {
-    content: "\67";
-}
-
-.icon-ic-alerts-24-px:before {
-    content: "\68";
-}
-
-.icon-ic-bank-accounts-24-px:before {
-    content: "\69";
-}
-
-.icon-ic-billing-history-24-px:before {
-    content: "\6a";
-}
-
-.icon-ic-cell-phone-grey-24-px:before {
-    content: "\6b";
-}
-
-.icon-ic-change-password-24-px:before {
-    content: "\6c";
-}
-
-.icon-ic-chevron-right-24px:before {
-    content: "\6d";
-}
-
-.icon-ic-coins-grey-24px:before {
-    content: "\6e";
-}
-
-.icon-ic-invite-friends-24-px:before {
-    content: "\6f";
-}
-
-.icon-ic-invite-facebook-friends-24-px:before {
-    content: "\70";
-}
-
-.icon-ic-help-2-24-px:before {
-    content: "\71";
-}
-
-.icon-ic-gallery-24-px:before {
-    content: "\72";
-}
-
-.icon-ic-enquiry-location-24-px:before {
-    content: "\73";
-}
-
-.icon-ic-dislikes-24-px-copy:before {
-    content: "\74";
-}
-
-.icon-ic-courses-24-px-copy:before {
-    content: "\75";
-}
-
-.icon-ic-course-enrolled-24-px:before {
-    content: "\76";
-}
-
-.icon-ic-course-created-24-px:before {
-    content: "\77";
-}
-
-.icon-ic-contact-us-24-px:before {
-    content: "\78";
-}
-
-.icon-ic-coins-white-24-px:before {
-    content: "\79";
-}
-
-.icon-ic-coins-red-dot-white-24px:before {
-    content: "\7a";
-}
-
-.icon-ic-invite-reviews-24-px:before {
-    content: "\41";
-}
-
-.icon-ic-logout-24-px:before {
-    content: "\42";
-}
-
-.icon-ic-likes-24-px:before {
-    content: "\43";
-}
-
-.icon-ic-menu-24-px:before {
-    content: "\44";
-}
-
-.icon-ic-more-24-px:before {
-    content: "\45";
-}
-
-.icon-ic-my-requirements-24-px:before {
-    content: "\46";
-}
-
-.icon-ic-notifications-none-white-24px:before {
-    content: "\47";
-}
-
-.icon-ic-notifications-red-dot-white-24px-copy:before {
-    content: "\48";
-}
-
-.icon-ic-phone-24-px:before {
-    content: "\49";
-}
-
-.icon-ic-phone-call-ringing:before {
-    content: "\4a";
-}
-
-.icon-ic-preferences-24-px:before {
-    content: "\4b";
-}
-
-.icon-ic-privacy-setting-24-px:before {
-    content: "\4c";
-}
-
-.icon-ic-profile-24-px:before {
-    content: "\4d";
-}
-
-.icon-oval-772x:before {
-    content: "\4e";
-}
-
-.icon-map-pin2x:before {
-    content: "\4f";
-}
-
-.icon-institute2x:before {
-    content: "\50";
-}
-
-.icon-ic-viewed-grey-24-px:before {
-    content: "\51";
-}
-
-.icon-ic-subscription-24-px:before {
-    content: "\52";
-}
-
-.icon-ic-stand-out-24-px-copy:before {
-    content: "\53";
-}
-
-.icon-ic-sms-alerts-24-px:before {
-    content: "\54";
-}
-
-.icon-ic-saved-responses-24-px:before {
-    content: "\55";
-}
-
-.icon-ic-promote-profile-24-px:before {
-    content: "\56";
-}
-
-.icon-ic-dashboard-24-px:before {
-    content: "\57";
-}
-
-.icon-checkbox-not-select:before {
-    content: "\58";
-}
-
-.icon-checkbox-select:before {
-    content: "\59";
-}
-
-.icon-distance:before {
-    content: "\5a";
-}
-
-.icon-globe:before {
-    content: "\30";
-}
-
-.icon-graduaton-cap:before {
-    content: "\31";
-}
-
-.icon-ic-report-24-px:before {
-    content: "\32";
-}
-
-.icon-ic-request-history-24-px:before {
-    content: "\33";
-}
-
-.icon-ic-request-payment-24-px:before {
-    content: "\34";
-}
-
-.icon-radio-off:before {
-    content: "\35";
-}
-
-.icon-radio-on:before {
-    content: "\36";
-}
-
-.icon-right-arrow:before {
-    content: "\37";
-}
-
-.icon-location:before {
-    content: "\38";
-}
-
-.icon-left-arrow:before {
-    content: "\39";
-}
-
-.icon-info:before {
-    content: "\21";
-}
-
-.icon-ic-payment-collection-24-px:before {
-    content: "\22";
-}
-
-.icon-briefcase:before {
-    content: "\23";
-}
-
-.icon-tag:before {
-    content: "\24";
-}
-
-.icon-phone:before {
-    content: "\25";
-}
-
-.icon-group:before {
-    content: "\26";
-}
-
-.icon-ic-view:before {
-    content: "\27";
-}
-
-.icon-ic-share-a-learninh-tip:before {
-    content: "\28";
-}
-
-.icon-ic-cal:before {
-    content: "\29";
-}
-
-.icon-ic-post-a-learning-tip:before {
-    content: "\2a";
-}
-
-.icon-image-upload:before {
-    content: "\2b";
-}
-
-.icon-blue-dropdown:before {
-    content: "\2c";
-}
-
-.icon-down-arrow:before {
-    content: "\2d";
-}
-
-.icon-up-arrow:before {
-    content: "\2e";
-}
-
-.icon-ic-recent-questions:before {
-    content: "\2f";
-}
-
-.icon-video-upload-1:before {
-    content: "\3a";
-}
-
-.icon-certified:before {
-    content: "\3b";
-}
-
-.icon-answers:before {
-    content: "\3c";
-}
-
-.icon-reviews:before {
-    content: "\3d";
-}
-
-.icon-platinum:before {
-    content: "\3e";
-}
-
-.icon-ic-auto-response-preferences:before {
-    content: "\3f";
-}
-
-.icon-community0:before {
-    content: "\40";
-}
-
-.icon-classes-conducted0:before {
-    content: "\5b";
-}
-
-.icon-course-and-workshop0:before {
-    content: "\5d";
-}
-
-.icon-course-phase-one0:before {
-    content: "\5e";
-}
-
-.icon-ic-auto-response-preferences-1:before {
-    content: "\5f";
-}
-
-.icon-invite-and-review0:before {
-    content: "\60";
-}
-
-.icon-recent-question0:before {
-    content: "\7b";
-}
-
-.icon-request-a-payment0:before {
-    content: "\7c";
-}
-
-.icon-request-history0:before {
-    content: "\7d";
-}
-
-.icon-membership0:before {
-    content: "\7e";
-}
-
-.icon-ic-invite-friends-24-px0:before {
-    content: "\5c";
-}
-
-.icon-post-a-lesson0:before {
-    content: "\e000";
-}
-
-.icon-email-preference:before {
-    content: "\e001";
-}
-
-.icon-your-profile:before {
-    content: "\e002";
-}
-
-.icon-social-veufication:before {
-    content: "\e003";
-}
-
-.icon-sms-preference:before {
-    content: "\e004";
-}
-
-.icon-payment-collection0:before {
-    content: "\e005";
-}
-
-.icon-new-enquiry-alert:before {
-    content: "\e006";
-}
-
-.icon-promote0:before {
-    content: "\e007";
-}
-
-.icon-profile-title1:before {
-    content: "\e008";
-}
-
-.icon-profile-info0:before {
-    content: "\e009";
-}
-
-.icon-summary-of-exp1:before {
-    content: "\e00a";
-}
-
-.icon-job0:before {
-    content: "\e00b";
-}
-
-.icon-lock1:before {
-    content: "\e00c";
-}
-
-.icon-language-speak1:before {
-    content: "\e00d";
-}
-
-.icon-alert1:before {
-    content: "\e00e";
-}
-
-.icon-education1:before {
-    content: "\e00f";
-}
-
-.icon-tick-outline1:before {
-    content: "\e010";
-}
-
-.icon-tick-fill1:before {
-    content: "\e011";
-}
-
-.icon-ic-course-1:before {
-    content: "\e012";
-}
-
-.icon-ic-course-2:before {
-    content: "\e013";
-}
-
-.icon-0:before {
-    content: "\e014";
-}
-
-.icon-batch:before {
-    content: "\e015";
-}
-
-.icon-class-and-workshop:before {
-    content: "\e016";
-}
-
-.icon-fill-876:before {
-    content: "\e017";
-}
-
-.icon-noun-766021-cc:before {
-    content: "\e018";
-}
-
-.icon-teacher:before {
-    content: "\e019";
-}
-
-.icon-icon-course:before {
-    content: "\e01a";
-}
-
-.icon-icon-course-pictures:before {
-    content: "\e01b";
-}
-
-.icon-icon-students-1:before {
-    content: "\e01c";
-}
-
-.icon-icon-course-pictures-1:before {
-    content: "\e01d";
-}
-
-.icon-icon-ad-venue:before {
-    content: "\e01e";
-}
-
-.icon-icon-ad-trainer:before {
-    content: "\e01f";
-}
-
-.icon-view-previous-batch-1:before {
-    content: "\e020";
-}
-
-.icon-cancel-this-batch:before {
-    content: "\e021";
-}
-
-.icon-course-info:before {
-    content: "\e022";
-}
-
-.icon-add-another-batch:before {
-    content: "\e023";
-}
-
-.icon-direct-message:before {
-    content: "\e024";
-}
-
-.icon-phone-call-preferences:before {
-    content: "\e025";
-}
-
-.icon-ic-delete-course:before {
-    content: "\e026";
-}
-
-.icon-ic-changepwd:before {
-    content: "\e027";
-}
-
-.icon-deactivate-account:before {
-    content: "\e028";
-}
-
-.icon-settings:before {
-    content: "\e029";
-}
-
-.icon-make-profile-private:before {
-    content: "\e02a";
-}
-
-.icon-gstin:before {
-    content: "\e02b";
-}
-
-.icon-ic-incoming-call:before {
-    content: "\e02c";
-}
-
-.icon-ic-outgoing-call:before {
-    content: "\e02d";
-}
-
-.icon-ic-insights:before {
-    content: "\e02e";
-}
-
-.icon-twitter:before {
-    content: "\e02f";
-}
-
-.icon-sharethis:before {
-    content: "\e031";
-}
-
-.icon-facebook-icon:before {
-    content: "\e030";
-}
-
-.icon-back2x:before {
-    content: "\62";
-}
-
-.icon-clock:before {
-    content: "\e032";
-}
-
-.icon-facebook-square:before {
-    content: "\e034";
-}
-
-.icon-google-plus-caps:before {
-    content: "\e033";
-}
-
-.icon-sad-smily:before {
-    content: "\e035";
-}
-
-.icon-happy-smily:before {
-    content: "\e036";
-}
-
-.icon-thumbs-o-up:before {
-    content: "\e037";
-}
-
-.icon-thumbs-o-down:before {
-    content: "\e038";
-}
-
-.icon-question-circle:before {
-    content: "\e039";
-}
-
-.icon-heart-o:before {
-    content: "\e03a";
-}
-
-.icon-exclamation-circle:before {
-    content: "\e03b";
-}
-
-.icon-book-open:before {
-    content: "\e040";
-}
-
-.icon-calendar:before {
-    content: "\e041";
-}
-
-.icon-earphones:before {
-    content: "\e042";
-}
-
-.icon-film:before {
-    content: "\e043";
-}
-
-.icon-note:before {
-    content: "\e044";
-}
-
-.icon-social-youtube:before {
-    content: "\e045";
-}
-
-.icon-notebook:before {
-    content: "\e046";
-}
-
-.icon-doc:before {
-    content: "\e047";
-}
-
-.icon-right-arrow-1:before {
-    content: "\e03c";
-}
-
-.icon-locked:before {
-    content: "\e03d";
-}
-
-.icon-complete:before {
-    content: "\e03e";
-}
-
-.icon-unlocked:before {
-    content: "\e03f";
-}
-
-.icon-tag-1:before {
-    content: "\e048";
-}
-
-.icon-user:before {
-    content: "\e049";
-}
-
-.icon-event:before {
-    content: "\e04a";
-}
-
-.icon-location-1:before {
-    content: "\e04b";
-}
-
-.icon-duration:before {
-    content: "\e04c";
-}
-
-.icon-download:before {
-    content: "\e04d";
-}
-
-.icon-delete:before {
-    content: "\e04e";
-}
-
-.icon-heart-fill:before {
-    content: "\e04f";
-}
-
-.icon-sort:before {
-    content: "\e050";
-}
-
-.icon-filter:before {
-    content: "\e051";
-}
-
-.icon-unlocked-1:before {
-    content: "\e053";
-}
-
-.icon-question-bank:before {
-    content: "\e052";
-}
-
-.icon-assessment:before {
-    content: "\e054";
-}
-
-.icon-screen-full:before {
-    content: "\e058";
-}
-
-.icon-screen-normal:before {
-    content: "\e059";
-}
-
-.icon-mic:before {
-    content: "\e056";
-}
-
-.icon-monitor:before {
-    content: "\e05c";
-}
-
-.icon-logout:before {
-    content: "\e05d";
-}
-
-.icon-camera:before {
-    content: "\e05e";
 }
 
 html,
@@ -1216,39 +248,25 @@ select {
     vertical-align: middle;
 }
 
-@font-face {
-    font-family: Avenir;
-    src: url('https://c.urbanpro.com/assets/fonts/Avenir-Book.eot');
-    src: url('https://c.urbanpro.com/assets/fonts/Avenir-Book.eot?#iefix') format('embedded-opentype'), url('https://c.urbanpro.com/assets/fonts/Avenir-Book.woff2') format('woff2'), url('https://c.urbanpro.com/assets/fonts/Avenir-Book.woff') format('woff'), url('https://c.urbanpro.com/assets/fonts/Avenir-Book.ttf') format('truetype'), url('https://c.urbanpro.com/assets/fonts/Avenir-Book.svg#Avenir-Book') format('svg');
+
+@font-face{
+    font-family: "ubuntu-bold";
+    src: url("/assets/fonts/Ubuntu/Ubuntu-Bold.ttf");
+    font-weight: normal;
+    font-style: normal;
     font-display: swap;
 }
 
-@font-face {
-    font-family: Avenir;
-    src: url('https://c.urbanpro.com/assets/fonts/Avenir-Medium.eot');
-    src: url('https://c.urbanpro.com/assets/fonts/Avenir-Medium.eot?#iefix') format('embedded-opentype'), url('https://c.urbanpro.com/assets/fonts/Avenir-Medium.woff2') format('woff2'), url('https://c.urbanpro.com/assets/fonts/Avenir-Medium.woff') format('woff'), url('https://c.urbanpro.com/assets/fonts/Avenir-Medium.ttf') format('truetype'), url('https://c.urbanpro.com/assets/fonts/Avenir-Medium.svg#Avenir-Medium') format('svg');
-    font-weight: 600;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: Avenir;
-    src: url('https://c.urbanpro.com/assets/fonts/Avenir-Heavy.eot');
-    src: url('https://c.urbanpro.com/assets/fonts/Avenir-Heavy.eot?#iefix') format('embedded-opentype'), url('https://c.urbanpro.com/assets/fonts/Avenir-Heavy.woff2') format('woff2'), url('https://c.urbanpro.com/assets/fonts/Avenir-Heavy.woff') format('woff'), url('https://c.urbanpro.com/assets/fonts/Avenir-Heavy.ttf') format('truetype'), url('https://c.urbanpro.com/assets/fonts/Avenir-Heavy.svg#Avenir-Heavy') format('svg');
-    font-weight: bold;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: Avenir;
-    src: url('https://c.urbanpro.com/assets/fonts/Avenir-Black.eot');
-    src: url('https://c.urbanpro.com/assets/fonts/Avenir-Black.eot?#iefix') format('embedded-opentype'), url('https://c.urbanpro.com/assets/fonts/Avenir-Black.woff2') format('woff2'), url('https://c.urbanpro.com/assets/fonts/Avenir-Black.woff') format('woff'), url('https://c.urbanpro.com/assets/fonts/Avenir-Black.ttf') format('truetype'), url('https://c.urbanpro.com/assets/fonts/Avenir-Black.svg#Avenir-Black') format('svg');
-    font-weight: 900;
+@font-face{
+    font-family: "ubuntu-Regular";
+    src: url("/assets/fonts/Ubuntu/Ubuntu-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
     font-display: swap;
 }
 
 body {
-    font-family: Avenir, arial, sans-serif;
+    font-family: "ubuntu-medium"; /*arial, sans-serif; */
     *font-size: small;
 }
 
@@ -1256,14 +274,14 @@ select,
 input,
 textarea,
 button {
-    font: 99% sans-serif;
+    font: 99% "ubuntu-Regular";
 }
 
 pre,
 code,
 kbd,
 samp {
-    font-family: AvenirBook, 'Open Sans', sans-serif;
+    font-family: "ubuntu-Regular"; /*'Open Sans', sans-serif; */
 }
 
 body,
@@ -1375,10 +393,6 @@ select,
 textarea {
     margin: 0;
 }
-
-input:valid,
-textarea:valid {}
-
 input:invalid,
 textarea:invalid {
     border-radius: 1px;
@@ -1529,7 +543,7 @@ button {
 }
 
 * {
-    font-family: Avenir, 'Open Sans', sans-serif !important;
+    font-family: "ubuntu-Regular", 'Open Sans', sans-serif !important;
 }
 
 html,
@@ -1538,7 +552,7 @@ body {
     padding: 0;
     background-color: #e4e4e4 !important;
     color: #333;
-    font-family: Avenir, 'Open Sans', sans-serif;
+    font-family: "ubuntu-Regular", 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 13px !important;
     counter-reset: section;
@@ -1569,1017 +583,6 @@ a.active {
     outline: none;
 }
 
-.framework {
-    margin: 0 auto;
-    padding: 0;
-    width: 980px;
-    position: relative;
-}
-
-.loud {
-    font-weight: 600;
-}
-
-.italic {
-    font-style: italic;
-}
-
-.g1,
-.g2,
-.g2-1,
-.g3,
-.g4,
-.g4-1,
-.g5,
-.g6,
-.g7,
-.g7-2,
-.g7-1,
-.g8,
-.g9,
-.g10,
-.g11,
-.g12,
-.g13,
-.g14,
-.g14-1,
-.g15,
-.g16,
-.g17,
-.g18,
-.g18-11,
-.g18-1,
-.g19,
-.g20,
-.g21,
-.g22,
-.g23,
-.g24 {
-    float: left;
-    margin-right: 10px;
-    overflow: hidden;
-}
-
-.g5-1,
-.g13-1,
-.g5-2 {
-    float: left;
-    margin-right: 7px;
-    overflow: hidden;
-}
-
-.g1 {
-    width: 30px;
-}
-
-.g2 {
-    width: 70px;
-}
-
-.g2-1 {
-    width: 100px;
-}
-
-.g3 {
-    width: 110px;
-}
-
-.g4 {
-    width: 150px;
-}
-
-.g4-1 {
-    width: 180px;
-}
-
-.g5 {
-    width: 190px;
-}
-
-.g5-1 {
-    width: 200px;
-}
-
-.g5-2 {
-    width: 208px;
-}
-
-.g6 {
-    width: 230px;
-}
-
-.g7 {
-    width: 270px;
-}
-
-.g7-2 {
-    width: 280px;
-}
-
-.g7-1 {
-    width: 300px;
-}
-
-.g8 {
-    width: 310px;
-}
-
-.g9 {
-    width: 350px;
-}
-
-.g10 {
-    width: 390px;
-}
-
-.g10-1 {
-    width: 420px;
-}
-
-.g11 {
-    width: 430px;
-}
-
-.g12 {
-    width: 470px;
-}
-
-.g13 {
-    width: 510px;
-}
-
-.g13-1 {
-    width: 525px;
-    overflow: visible;
-}
-
-.g14 {
-    width: 550px;
-}
-
-.g14-1 {
-    width: 580px;
-}
-
-.g15 {
-    width: 590px;
-}
-
-.g16 {
-    width: 630px;
-}
-
-.g17 {
-    width: 670px;
-}
-
-.g18 {
-    width: 710px;
-}
-
-.g18-11 {
-    width: 720px;
-}
-
-.g18-1 {
-    width: 740px;
-}
-
-.g19 {
-    width: 750px;
-}
-
-.g20 {
-    width: 790px;
-}
-
-.g21 {
-    width: 830px;
-}
-
-.g22 {
-    width: 870px;
-}
-
-.g23 {
-    width: 910px;
-}
-
-.g24 {
-    width: 950px;
-}
-
-.ht-30 {
-    height: 100px;
-}
-
-.fullWidth {
-    width: 100%;
-}
-
-.fullHeight {
-    height: 100%;
-}
-
-.ft-wt-500 {
-    font-weight: 500 !important;
-}
-
-.ft-wt-300 {
-    font-weight: 300;
-}
-
-.ft-wt-bold {
-    font-weight: bold;
-}
-
-.ft-wt-600,
-.ft-600 {
-    font-weight: 600;
-}
-
-.ft-wt-nrml {
-    font-weight: normal
-}
-
-.marginTop2,
-.mt-2 {
-    margin-top: 2px;
-}
-
-.marginTop5,
-.mt-5 {
-    margin-top: 5px !important;
-}
-
-.marginTop8,
-.mt-8 {
-    margin-top: 8px;
-}
-
-.marginTop10,
-.mt-10,
-.mtop-10 {
-    margin-top: 10px !important;
-}
-
-.marginTop12 {
-    margin-top: 12px;
-}
-
-.marginTop15,
-.mt-15 {
-    margin-top: 15px;
-}
-
-.marginTop20,
-.mt-20 {
-    margin-top: 20px !important;
-}
-
-.marginTop22 {
-    margin-top: 22px !important;
-}
-
-.marginTop25,
-.mt-25 {
-    margin-top: 25px !important;
-}
-
-.marginTop30,
-.mt-30 {
-    margin-top: 30px;
-}
-
-.marginTop35 {
-    margin-top: 35px;
-}
-
-.marginTop40,
-.mt-40 {
-    margin-top: 40px;
-}
-
-.marginTop45 {
-    margin-top: 45px;
-}
-
-.marginTop55 {
-    margin-top: 55px;
-}
-
-.marginTop120 {
-    margin-top: 120px;
-}
-
-.mr-1 {
-    margin-right: 1px !important;
-}
-
-.marginRit5,
-.mr-5 {
-    margin-right: 5px !important;
-}
-
-.marginRit10,
-.mr-10 {
-    margin-right: 10px;
-}
-
-.marginRit20,
-.mr-20 {
-    margin-right: 20px;
-}
-
-.marginRit25 {
-    margin-right: 25px;
-}
-
-.mr-30 {
-    margin-right: 30px;
-}
-
-.mr-40 {
-    margin-right: 40px;
-}
-
-.marginLft2 {
-    margin-left: 2px;
-}
-
-.marginLft5 {
-    margin-left: 5px;
-}
-
-.marginLft7 {
-    margin-left: 7px;
-}
-
-.marginLft8 {
-    margin-left: 8px;
-}
-
-.marginLft10,
-.ml-10 {
-    margin-left: 10px !important;
-}
-
-.marginLft-10 {
-    margin-left: -10px;
-}
-
-.marginLft15,
-.ml-15 {
-    margin-left: 15px;
-}
-
-.marginLft16,
-.ml-16 {
-    margin-left: 16px;
-}
-
-.marginLft18,
-.ml-18 {
-    margin-left: 18px;
-}
-
-.marginLft20,
-.ml-20 {
-    margin-left: 20px;
-}
-
-.marginLft25,
-.ml-25 {
-    margin-left: 25px;
-}
-
-.marginLft30,
-.ml-30 {
-    margin-left: 30px;
-}
-
-.marginLft35,
-.ml-35 {
-    margin-left: 30px;
-}
-
-.marginLft40,
-.ml-40 {
-    margin-left: 40px;
-}
-
-.marginLft50,
-.ml-50 {
-    margin-left: 50px;
-}
-
-.marginLft55 {
-    margin-left: 55px !important;
-}
-
-.marginLft75 {
-    margin-left: 75px !important;
-}
-
-.marginLft85 {
-    margin-left: 85px;
-}
-
-.marginLft125 {
-    margin-left: 125px !important;
-}
-
-.marginLft200 {
-    margin-left: 200px !important;
-}
-
-.marginLft220 {
-    margin-left: 220px !important;
-}
-
-.marginLft225 {
-    margin-left: 225px !important;
-}
-
-.marginLft270 {
-    margin-left: 270px !important;
-}
-
-.marginBtm8 {
-    margin-bottom: 8px;
-}
-
-.marginTB2 {
-    margin: 2px 0;
-}
-
-.marginTB5 {
-    margin: 5px 0;
-}
-
-.marginTB10 {
-    margin: 10px 0;
-}
-
-.marginTB20 {
-    margin: 20px 0;
-}
-
-.mt-0 {
-    margin-top: 0px !important;
-}
-
-.mt-50 {
-    margin-top: 50px !important;
-}
-
-.mt-70 {
-    margin-top: 70px !important;
-}
-
-.mt-80 {
-    margin-top: 80px !important;
-}
-
-.mt-90 {
-    margin-top: 90px !important;
-}
-
-.mt-60 {
-    margin-top: 60px !important;
-}
-
-.mt-22 {
-    margin-top: 22px !important;
-}
-
-.mt-30 {
-    margin-top: 30px;
-}
-
-.mt-32 {
-    margin-top: 32px !important;
-}
-
-.mt-13 {
-    margin-top: 13px !important;
-}
-
-.mt-16 {
-    margin-top: 16px !important;
-}
-
-.mt-17 {
-    margin-top: 17px !important;
-}
-
-.mt-18 {
-    margin-top: 18px !important;
-}
-
-.mt-19 {
-    margin-top: 19px !important;
-}
-
-.mt-3 {
-    margin-top: 3px !important;
-}
-
-.mt-6 {
-    margin-top: 6px !important;
-}
-
-.mt-7 {
-    margin-top: 7px !important;
-}
-
-.mt-30p {
-    margin-top: 30% !important;
-}
-
-.mt--25 {
-    margin-top: -25px !important;
-}
-
-.mt--13 {
-    margin-top: -13px;
-}
-
-.mt--5 {
-    margin-top: -5px;
-}
-
-.mt--6 {
-    margin-top: -6px;
-}
-
-.mt--7 {
-    margin-top: -7px;
-}
-
-.mt--8 {
-    margin-top: -8px;
-}
-
-.mt--9 {
-    margin-top: -9px;
-}
-
-.mt--10 {
-    margin-top: -10px;
-}
-
-.mt--11 {
-    margin-top: -11px;
-}
-
-.mt-130 {
-    margin-top: 130px;
-}
-
-.mb-0 {
-    margin-bottom: 0px !important;
-}
-
-.mb-1,
-.marginBtm1 {
-    margin-bottom: 1px !important;
-}
-
-.mb-3,
-.marginBtm3 {
-    margin-bottom: 3px !important;
-}
-
-.mb-7 {
-    margin-bottom: 7px !important;
-}
-
-.mb-8 {
-    margin-bottom: 8px
-}
-
-.mb-10,
-.marginBottom10,
-.marginBtm10 {
-    margin-bottom: 10px !important;
-}
-
-.mb-15,
-.marginBtm15 {
-    margin-bottom: 15px !important;
-}
-
-.mb-16 {
-    margin-bottom: 16px !important;
-}
-
-.mb-19 {
-    margin-bottom: 19px !important;
-}
-
-.mb-5,
-.marginBtm5 {
-    margin-bottom: 5px !important;
-}
-
-.mb-2,
-.marginBtm2 {
-    margin-bottom: 2px !important;
-}
-
-.mb-20,
-.marginBtm20 {
-    margin-bottom: 20px !important;
-}
-
-.mb-22 {
-    margin-bottom: 22px !important;
-}
-
-.mb-23 {
-    margin-bottom: 23px !important;
-}
-
-.mb-24 {
-    margin-bottom: 24px !important;
-}
-
-.mb-25 {
-    margin-bottom: 25px !important;
-}
-
-.mb-26 {
-    margin-bottom: 26px !important;
-}
-
-.mb-30,
-.marginBottom30 {
-    margin-bottom: 30px !important;
-}
-
-.mb-26 {
-    margin-bottom: 26px !important;
-}
-
-.mb-40 {
-    margin-bottom: 40px !important;
-}
-
-.mb-50 {
-    margin-bottom: 50px !important;
-}
-
-.mb-60 {
-    margin-bottom: 60px !important;
-}
-
-.mb-70 {
-    margin-bottom: 70px !important;
-}
-
-.m-5 {
-    margin: 5px;
-}
-
-.ml-3 {
-    margin-left: 3px !important;
-}
-
-.ml-4 {
-    margin-left: 4px !important;
-}
-
-.ml-5 {
-    margin-left: 5px !important;
-}
-
-.m-0 {
-    margin: 0px !important;
-}
-
-.m-1 {
-    margin: 1px !important;
-}
-
-.mt-0 {
-    margin-top: 0px;
-}
-
-.mt-14 {
-    margin-top: 14px;
-}
-
-.mt-23 {
-    margin-top: 23px;
-}
-
-.mt-24 {
-    margin-top: 24px;
-}
-
-.mt-35 {
-    margin-top: 35px;
-}
-
-.ml-44 {
-    margin-left: 44px;
-}
-
-.ml--12 {
-    margin-left: -12px;
-}
-
-.mr-0 {
-    margin-right: 0px !important;
-}
-
-.mr-7 {
-    margin-right: 7px;
-}
-
-.mr-15 {
-    margin-right: 15px;
-}
-
-.mr-17 {
-    margin-right: 17px;
-}
-
-.mr-24 {
-    margin-right: 24px;
-}
-
-.mr-50 {
-    margin-right: 50px;
-}
-
-.ml--20 {
-    margin-left: -20px;
-}
-
-.ml-23 {
-    margin-left: 23px;
-}
-
-.mr-60 {
-    margin-right: 60px;
-}
-
-.padding0 {
-    padding: 0px !important;
-}
-
-.paddingTop0 {
-    padding-top: 0px !important;
-}
-
-.pb-0 {
-    padding-bottom: 0px !important
-}
-
-.pl-0 {
-    padding-left: 0px !important;
-}
-
-.pr-0 {
-    padding-right: 0px !important;
-}
-
-.paddingBtm1 {
-    padding-bottom: 1px;
-}
-
-.paddingTop15 {
-    padding-top: 15px;
-}
-
-.paddingRit10 {
-    padding-right: 10px !important;
-}
-
-.paddingRit20 {
-    padding-right: 20px !important;
-}
-
-.paddingTop8 {
-    padding-top: 8px;
-}
-
-.paddingTop10 {
-    padding-top: 10px;
-}
-
-.paddingTop5 {
-    padding-top: 5px;
-}
-
-.paddingTop20 {
-    padding-top: 20px;
-}
-
-.paddingRit15 {
-    padding-right: 15px;
-}
-
-.paddingRit0 {
-    padding-right: 0px !important;
-}
-
-.paddingLeft5 {
-    padding-left: 5px !important;
-}
-
-.paddingBtm10 {
-    padding-bottom: 10px;
-}
-
-.paddingBtmLft10 {
-    padding: 0px 10px 10px 0px;
-}
-
-.paddingTB2 {
-    margin: 2px 0;
-}
-
-.paddingTB5 {
-    padding: 5px 0 !important;
-}
-
-.paddingTB10 {
-    padding: 10px 0;
-}
-
-.paddingTB30 {
-    padding: 30px 0;
-}
-
-.paddingTB40 {
-    padding: 40px 0;
-}
-
-.padding9 {
-    padding: 9px;
-}
-
-.padding10 {
-    padding: 10px;
-}
-
-.padding15 {
-    padding: 15px;
-}
-
-.padding20 {
-    padding: 20px;
-}
-
-.padding16 {
-    padding: 16px;
-}
-
-.paddingBtm30 {
-    padding-bottom: 30px !important;
-}
-
-.paddingBtm17 {
-    padding-bottom: 17px !important;
-}
-
-.paddingTB20LR10 {
-    padding: 20px 10px;
-}
-
-.fontSize10 {
-    font-size: 10px !important;
-}
-
-.fontSize11 {
-    font-size: 11px !important;
-}
-
-.fontSize12 {
-    font-size: 12px !important;
-}
-
-.fontSize13,
-.ftsize_13 {
-    font-size: 13px !important;
-}
-
-.fontSize14,
-.ftsize_14c {
-    font-size: 14px !important;
-}
-
-.fontSize15,
-.font-size15 {
-    font-size: 15px !important;
-}
-
-.fontSize16 {
-    font-size: 16px !important;
-}
-
-.fontSize17 {
-    font-size: 17px !important;
-}
-
-.fontSize18,
-.ftsize_18,
-.fontSize-18 {
-    font-size: 18px !important;
-}
-
-.fontSize19 {
-    font-size: 19px !important;
-}
-
-.fontSize20,
-.ftsize_20 {
-    font-size: 20px !important;
-}
-
-.fontSize22 {
-    font-size: 20px !important;
-}
-
-.fontSize22r {
-    font-size: 22px !important;
-}
-
-.fontSize24 {
-    font-size: 24px !important;
-}
-
-.fontSize25,
-.ft-size-25px {
-    font-size: 25px !important;
-}
-
-.fontSize28 {
-    font-size: 28px !important;
-}
-
-.fontSize30 {
-    font-size: 30px !important;
-}
-
-.fontSize40 {
-    font-size: 40px !important;
-}
-
-.lineHeight7 {
-    line-height: 7px;
-}
-
-.lineHeight15 {
-    line-height: 15px;
-}
-
-.lineHeight20 {
-    line-height: 20px;
-}
-
-.lineHeight22 {
-    line-height: 22px;
-}
-
-.lineHeight24 {
-    line-height: 24px;
-}
-
-.lineHeight26 {
-    line-height: 26px;
-}
-
-.lineHeight30 {
-    line-height: 30px;
-}
-
-.lineHeight14 {
-    line-height: 14px;
-}
-
-.border-1-d {
-    border: 1px solid #ddd;
-}
-
-.borderBtm000 {
-    border-bottom: 1px solid #000;
-}
-
-.borderBtmb2 {
-    border-bottom: 1px solid #b2b2b2;
-}
-
-.borderRit000 {
-    border-right: 1px solid #000;
-}
-
-.borderBtmccc {
-    border-bottom: 1px solid #ccc;
-}
 
 .clear {
     clear: both;
@@ -2742,7 +745,7 @@ a.active {
 }
 
 .error {
-    background: #f3f8fc url(https://www.urbanpro.com/assets/skin/exclamation.png) 8px 50%no-repeat;
+    background: #f3f8fc url(/assets/skin/exclamation.png) 8px 50%no-repeat;
     border: 1px solid red;
     color: #cc0000;
     margin: 10px 0 5px 0;
@@ -2763,7 +766,7 @@ div.errors ul {
 }
 
 div.errors li {
-    background: url(https://www.urbanpro.com/assets/skin/exclamation.png) 8px 0% no-repeat;
+    background: url(/assets/skin/exclamation.png) 8px 0% no-repeat;
     line-height: 16px;
     padding-left: 30px;
 }
@@ -2982,27 +985,6 @@ td.errors textarea {
     color: #fff;
 }
 
-.mvpSecondaryButton {
-    background: #fff;
-    font-size: 13px;
-    letter-spacing: 1.2px;
-    text-align: center;
-    display: inline-block;
-    padding: 0px 10px;
-    min-width: 80px;
-    text-decoration: none;
-    cursor: pointer;
-    line-height: 33px;
-    border-radius: 4px;
-    border: solid 2px #ff7733;
-    color: #ff7733;
-}
-
-.mvpSecondaryButton:hover {
-    border: solid 2px #ff7733;
-    color: #ff7733;
-}
-
 .ellipsis_line {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3045,31 +1027,6 @@ td.errors textarea {
     clear: left;
 }
 
-.tertiaryButton,
-.tertiaryButton:hover {
-    background: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    padding: 7px 15px;
-    color: #0072ff;
-    letter-spacing: 1px;
-    font-weight: 600;
-    border: 1px solid #0072FF;
-}
-
-.tertiaryButton:disabled {
-    border-color: #ccc;
-    cursor: not-allowed;
-    -webkit-text-fill-color: #ccc;
-    -webkit-opacity: 1;
-    color: #ccc;
-}
-
-.tertiaryButton.noBorderBtn {
-    border: 0px;
-    font-size: 14px;
-    letter-spacing: 0px;
-}
 
 .minHeight500 {
     min-height: 500px;
@@ -3189,7 +1146,7 @@ input[type=submit] {
     float: left;
     margin-right: 7px;
     width: auto !important;
-    background-image: url('https://www.urbanpro.com/assets/new-ui/tag.png');
+    background-image: url('/assets/new-ui/tag.png');
     background-repeat: no-repeat;
     padding-left: 22px;
 }
@@ -3344,7 +1301,7 @@ ul.questionPhotoSlides li {
 
 .commentImageContainer .black_arw .bx-prev,
 .commentImageContainer .prev_btn {
-    background-image: url(https://www.urbanpro.com/assets/new-ui/black_prev_arrow.png);
+    background-image: url(/assets/new-ui/black_prev_arrow.png);
     display: inline-block;
     background-color: transparent;
     border: none;
@@ -3357,7 +1314,7 @@ ul.questionPhotoSlides li {
 
 .commentImageContainer .black_arw .bx-next,
 .commentImageContainer .next_btn {
-    background-image: url(https://www.urbanpro.com/assets/new-ui/black_next_arrow.png);
+    background-image: url(/assets/new-ui/black_next_arrow.png);
     display: inline-block;
     background-color: transparent;
     border: none;
@@ -3581,7 +1538,7 @@ input[type=submit] {
 }
 
 .commentImgIcon {
-    background: transparent url('https://www.urbanpro.com/assets/new-ui/viewAll.png')no-repeat;
+    background: transparent url('/assets/new-ui/viewAll.png')no-repeat;
     background-position: 2px 2px;
     background-size: 19px;
     font-size: 15px;
@@ -3593,7 +1550,7 @@ input[type=submit] {
     margin: 0px 10px 5px 0px;
     border-radius: 2px;
     cursor: pointer;
-    background: transparent url('https://www.urbanpro.com/assets/icons/ic_likes.png')no-repeat;
+    background: transparent url('/assets/icons/ic_likes.png')no-repeat;
     background-position: 2px 2px;
     background-size: 17px;
     font-size: 15px;
@@ -3605,7 +1562,7 @@ input[type=submit] {
     margin: 0px 10px 0px 0px;
     border-radius: 2px;
     cursor: pointer;
-    background: transparent url('https://www.urbanpro.com/assets/icons/ic_dislike.png')no-repeat;
+    background: transparent url('/assets/icons/ic_dislike.png')no-repeat;
     background-position: 3px 3px;
     background-size: 17px;
     font-size: 15px;
@@ -3716,7 +1673,7 @@ input:checked+.toggle-switch:before {
 .greenCheckbox input[type=checkbox]+span:before {
     content: ".";
     font-size: 0px;
-    background: url('https://www.urbanpro.com/assets/new-ui/checkbox_outline.png');
+    background: url('/assets/new-ui/checkbox_outline.png');
     height: 18px;
     width: 18px;
     display: inline-block;
@@ -3726,7 +1683,7 @@ input:checked+.toggle-switch:before {
 .greenCheckbox input[type=checkbox]:checked+span:before {
     content: ".";
     font-size: 0px;
-    background: url('https://www.urbanpro.com/assets/new-ui/checkbox.png');
+    background: url('/assets/new-ui/checkbox.png');
     height: 18px;
     width: 18px;
     display: inline-block;
@@ -3761,7 +1718,7 @@ input:checked+.toggle-switch:before {
 .hvPwdBlock input[type=radio]+span:before {
     content: ".";
     font-size: 0px;
-    background: url('https://www.urbanpro.com/assets/new-ui/radio_off.png');
+    background: url('/assets/new-ui/radio_off.png');
     height: 18px;
     width: 18px;
     display: inline-block;
@@ -3773,7 +1730,7 @@ input:checked+.toggle-switch:before {
 .hvPwdBlock input[type=radio]:checked+span:before {
     content: ".";
     font-size: 0px;
-    background: url('https://www.urbanpro.com/assets/new-ui/radio_on.png');
+    background: url('/assets/new-ui/radio_on.png');
     height: 18px;
     width: 18px;
     display: inline-block;
@@ -3985,7 +1942,7 @@ textarea:invalid {
 
 select.selectField,
 .selectField {
-    background-image: url('https://www.urbanpro.com/assets/selectIcon.png') !important;
+    background-image: url('/assets/selectIcon.png') !important;
     background-size: 38px 33px !important;
     background-position: right !important;
     background-repeat: no-repeat !important;
@@ -4005,7 +1962,7 @@ select.selectField,
 }
 
 .selectIcon {
-    background: url(https://www.urbanpro.com/assets/icons/new-down-arrow.png) no-repeat right 6px center !important;
+    background: url(/assets/icons/new-down-arrow.png) no-repeat right 6px center !important;
     background-size: 16px !important;
     background-color: #fff;
     appearance: none;
@@ -4064,7 +2021,7 @@ textarea.textField,
 
 .inputFieldErr {
     border: 1px solid #f66 !important;
-    background-image: url('https://www.urbanpro.com/assets/new-ui/error.png');
+    background-image: url('/assets/new-ui/error.png');
     background-size: 12px;
     background-position: right 6px center;
     background-repeat: no-repeat;
@@ -4153,8 +2110,7 @@ textarea.textField,
     color: #A9A5A5;
 }
 
-.blackOverlay,
-.urbanproOverlay {
+.blackOverlay {
     display: none;
     position: fixed;
     top: 0px;
@@ -4361,7 +2317,7 @@ span.listItemImage {
 .required.notValid textarea,
 .optional.notValid input {
     border: 1px solid #f66 !important;
-    background-image: url('https://www.urbanpro.com/assets/new-ui/error.png');
+    background-image: url('/assets/new-ui/error.png');
     background-size: 12px;
     background-position: right 5px center;
     background-repeat: no-repeat;
@@ -4548,7 +2504,7 @@ ul.l-listItem .listRightContent {
 }
 
 .buttonSpinner {
-    background-image: url('https://www.urbanpro.com/assets/new-ui/spinner.gif') !important;
+    background-image: url('/assets/new-ui/spinner.gif') !important;
     background-repeat: no-repeat !important;
     background-position: right !important;
     background-size: 18px !important;
@@ -4559,7 +2515,7 @@ ul.l-listItem .listRightContent {
 
 .spinnerInBtn.primaryButton[disabled="disabled"],
 .spinnerInBtn:disabled {
-    background-image: url(https://www.urbanpro.com/assets/new-ui/spinner_white.gif);
+    background-image: url(/assets/new-ui/spinner_white.gif);
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 22px;
@@ -4578,34 +2534,6 @@ input[type=number] {
 
 .small-gridItem {
     padding: 10px;
-}
-
-.urbanproPopup {
-    display: none;
-    background: #fff;
-    padding: 20px;
-    position: fixed;
-    max-width: 600px;
-    margin: auto;
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.20);
-    border-radius: 3px;
-    -webkit-transform: translate(0%, -50%);
-    -moz-transform: translate(0%, -50%);
-    -ms-transform: translate(0%, -50%);
-    -o-transform: translate(0%, -50%);
-    transform: translate(0%, -50%);
-    transform: translate(0%, -50%);
-    top: 50%;
-    left: 0;
-    z-index: 1000;
-    width: auto;
-    height: auto;
-    right: 0px;
-}
-
-.urbanproPopup .tertiaryButton,
-.urbanproPopup .tertiaryButton:hover {
-    border: none;
 }
 
 textarea.upTextarea {
@@ -4649,82 +2577,6 @@ textarea.upTextarea {
     text-align: center;
 }
 
-.urbanproPopupClose {
-    position: absolute;
-    right: 8px;
-    top: 5px;
-    font-size: 19px;
-    cursor: pointer;
-}
-
-.upPopheaderTitle .urbanproPopupClose {
-    top: 0px;
-}
-
-.urbanproPopupClose.alignLeft {
-    right: initial;
-    left: 8px;
-}
-
-.urbanproInfoIcon {
-    font-size: 6px;
-    border-radius: 100%;
-    border: 1px solid #aaa;
-    padding: 0px 3px 0px;
-    top: -3px;
-    position: relative;
-    cursor: pointer;
-    color: #999;
-}
-
-.urbanproInfoIconFilled {
-    font-size: 10px;
-    background: #ccc;
-    color: #fff;
-    font-weight: 700;
-    padding: 0 6px;
-    border: none;
-    display: inline-block;
-    line-height: 14px;
-    border-radius: 100%;
-    position: relative;
-    cursor: pointer;
-    top: -3px;
-}
-
-.urbanProToastMsg {
-    background: #fff;
-    position: absolute;
-    margin: 0px;
-    padding: 2px 10px;
-    box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
-    display: none;
-}
-
-.urbanproInfoIcon.arrowUp:before,
-.hasArrowToast.arrowUp:before {
-    content: " ";
-    position: absolute;
-    border-left: 11px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #dcdbdb;
-    top: 12px;
-    left: -7px;
-    z-index: 0;
-}
-
-.urbanproInfoIcon.arrowUp:after,
-.hasArrowToast.arrowUp:after {
-    content: " ";
-    position: absolute;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid #fff;
-    top: 12px;
-    left: -4px;
-    z-index: 10;
-}
 
 .overflowInit {
     overflow: initial;
@@ -4767,7 +2619,7 @@ input.upInputField:invalid {
     position: static;
     width: 100px;
     height: 14.3px;
-    background: url(https://www.urbanpro.com/assets/new-ui/star_new.png?v=01);
+    background: url(/assets/new-ui/star.png);
     background-repeat: repeat-x;
     background-position: 0 0.33334px;
     margin: 1px 1px 0px 1px;
@@ -4780,7 +2632,7 @@ input.upInputField:invalid {
 .new_rating,
 .rating {
     height: 14.3px;
-    background: url(https://www.urbanpro.com/assets/new-ui/star_new.png?v=01);
+    background: url(/assets/new-ui/star.png);
     background-position: 0 -16px;
     background-repeat: repeat-x;
 }
@@ -4799,7 +2651,7 @@ input.upInputField:invalid {
 }
 
 .needGreenBg {
-    background: url(https://www.urbanpro.com/assets/new-ui/green_bg_tile.png?v=01);
+    background: url(/assets/new-ui/green_bg_tile.png);
     background-repeat: repeat;
 }
 
@@ -4809,7 +2661,7 @@ input.upInputField:invalid {
 }
 
 .greenBgNeedPostBlock {
-    background-image: url(https://www.urbanpro.com/assets/new-ui/green_bg_tile.png);
+    background-image: url(/assets/new-ui/green_bg_tile.png);
     padding: 25px 10px;
     text-align: center;
     color: #fff;
@@ -4940,7 +2792,7 @@ select:-moz-focusring {
     position: static;
     width: 81px;
     height: 12.3px;
-    background: url(https://www.urbanpro.com/assets/new-ui/small_rating.png?v=02);
+    background: url(/assets/new-ui/rating_small.png);
     background-repeat: repeat-x;
     background-position: 0 0.33334px;
     margin: 1px 1px 0px 1px;
@@ -4949,23 +2801,23 @@ select:-moz-focusring {
 
 .small_rating {
     height: 12.3px;
-    background: url(https://www.urbanpro.com/assets/new-ui/small_rating.png?v=02);
+    background: url(/assets/new-ui/rating_small.png);
     background-position: 0px -14px;
     background-repeat: repeat-x;
 }
 
 .greyStars .small_rating_bar {
-    background: url(https://www.urbanpro.com/assets/new-ui/star_grey.png);
+    background: url(/assets/new-ui/star_grey.png);
     height: 15px;
 }
 
 .greyStars .small_rating {
-    background: url(https://www.urbanpro.com/assets/new-ui/star_grey.png);
+    background: url(/assets/new-ui/star_grey.png);
     height: 15px;
 }
 
 .seoInfoBlock {
-    background-image: url(https://www.urbanpro.com/assets/new-ui/post_need_bg.svg);
+    background-image: url(/assets/new-ui/post_need_bg.svg);
     background-size: contain;
     background-repeat: repeat;
     border-radius: 6px;
@@ -5004,41 +2856,11 @@ textarea:focus {
     border-width: 0px !important;
 }
 
-.mce-i-uploadImage {
-    background: url("https://www.urbanpro.com/assets/icons/image-upload.png") !important;
-    background-size: 100% !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-}
-
-.mce-i-uploadVideo {
-    background: url("https://www.urbanpro.com/assets/icons/video-upload.png") !important;
-    background-size: 100% !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-}
 
 input.green_loader[type="text"]:focus {
-    background: url('https://www.urbanpro.com/assets/new-ui/green_loader.gif') calc(100% - 5px) 14px/14px no-repeat !important;
+    background: url('/assets/new-ui/green_loader.gif') calc(100% - 5px) 14px/14px no-repeat !important;
 }
 
-.user-custom-img {
-    opacity: 0.25;
-    border: 1px solid rgba(51, 51, 51, 0.5);
-    padding: 2px;
-    border-radius: 3px;
-    width: 48px;
-    height: 48px;
-    background: transparent url('https://www.urbanpro.com/assets/svg/user.svg') no-repeat;
-    background-size: 28px;
-    background-position: center center;
-    display: inline-block;
-}
-
-.upPopheaderTitle {
-    font-size: 18px;
-    font-weight: 600;
-}
 
 .timerContainer {
     display: flex;
@@ -5082,7 +2904,7 @@ input.green_loader[type="text"]:focus {
 }
 
 .useMyCurrentLocation.loading {
-    background-image: url('https://www.urbanpro.com/assets/new-ui/spinner.gif');
+    background-image: url('/assets/new-ui/spinner.gif');
     background-repeat: no-repeat;
     background-size: 20px;
     background-position: center;
@@ -5184,10 +3006,7 @@ input.green_loader[type="text"]:focus {
     border-top: 0px;
 }
 
-.bigWhiteToolTip span.urbanproInfoIconFilled {
-    margin-left: 2px;
-    margin-top: 2px;
-}
+
 
 .verticalAlignSub {
     vertical-align: sub;
@@ -5212,9 +3031,7 @@ input.green_loader[type="text"]:focus {
         display: none !important;
     }
 
-    span.urbanproInfoIconFilled.bigWhiteToolTip {
-        position: static;
-    }
+    
 
     .bigWhiteToolTip[data-tooltip]:hover .arrow-up {
         display: none;
@@ -5588,7 +3405,6 @@ input.green_loader[type="text"]:focus {
 .mCSB_scrollTools .mCSB_buttonLeft,
 .mCSB_scrollTools .mCSB_buttonRight,
 .mCSB_scrollTools .mCSB_buttonUp {
-    background-image: url(https://www.urbanpro.com/tutor-teacher-trainer-job-registration-india/mCSB_buttons.png);
     background-repeat: no-repeat;
     opacity: .4;
     filter: "alpha(opacity=40)";
@@ -7070,7 +4886,7 @@ span.coinsPlanNotSub a {
     display: none;
 }
 
-.upLogo img {
+.aslLogo img {
     max-height: 36px;
 }
 
@@ -7143,11 +4959,11 @@ nav.seoLinksNav {
     height: 58px;
 }
 
-a.display-IB.upLogoDisable {
+a.display-IB.aslLogoDisable {
     margin: 9px 0;
 }
 
-a.display-IB.upLogo {
+a.display-IB.aslLogo {
     margin: 9px 0;
 }
 
@@ -8040,7 +5856,7 @@ a.signUpNavButton:hover {
         margin: 10px;
     }
 
-    .upLogo img {
+    .aslLogo img {
         width: 150px;
     }
 
@@ -8211,7 +6027,7 @@ a.signUpNavButton:hover {
         z-index: 1002;
     }
 
-    .leftNavVisible .upLogo .logo-menu-arrow {
+    .leftNavVisible .aslLogo .logo-menu-arrow {
         background-image: url('/assets/arrow-upicon.png');
     }
 
@@ -8436,7 +6252,7 @@ a.signUpNavButton:hover {
     }
 
     .menuFooter a:first-child {
-        border-right: 1px solid #f1ff1;
+        border-right: 1px solid white;
     }
 
     .menuFooter a span {
@@ -8809,7 +6625,7 @@ ul.extraFooterMenu li a {
     margin: 0 auto;
 }
 
-.footerCLogo .upLogo img {
+.footerCLogo .aslLogo img {
     border-right: 1px solid rgba(112, 112, 112, 0.33);
     padding-right: 21px;
 }
@@ -10375,8 +8191,7 @@ select.inputFieldError {
         right: 4px;
     }
 }
-</style>
-<style type="text/css">
+
 .newTopHeader .mobileSearchIcon {
     display: none;
 }

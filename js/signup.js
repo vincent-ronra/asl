@@ -206,7 +206,7 @@ $(document).ready(function() {
 	});
 
 	if($(window).width()<940){
-		$('#providerPanel').length>0 ? $('.upLogo').addClass('upHeaderLogo'):'';
+		$('#providerPanel').length>0 ? $('.aslLogo').addClass('upHeaderLogo'):'';
 		if ( $('.upQuikrLogo').length > 0)
 			$('#providerPanel').length>0 ? $('.upQuikrLogo').addClass('upHeaderLogo'):'';
 	}
@@ -238,7 +238,7 @@ $(document).ready(function() {
 	if ($('#header_name').length > 0) {
 		$('.header_name').html($('#header_name').val());
 	}else{
-		$('.header_name').html("UrbanPro");
+		$('.header_name').html("AssistLnk");
 	}
 
 	if ($('#header_need_locality').length > 0) {
@@ -617,7 +617,7 @@ function updateCityLocationForUser(cityName){
 function addPagetoHistoryHeaderNavMenu(){
 	//add url to history
 	if (history.pushState && $(window).width()<900) {
-			history.pushState({state: 'headerNav'}, 'urbanpro.com');
+			history.pushState({state: 'headerNav'}, 'AssistLnk.com');
 	}
 }
 //on click of browser back history
@@ -1437,7 +1437,7 @@ $(document).ready(function() {
 		});
 	}
 
-	$('input[name=instiName],input[name=fullName],input[name=contactNameInsti]').keypress(function(e) {
+	$('input[name=busi_name],input[name=fullName],input[name=contactNameInsti]').keypress(function(e) {
         var regex = new RegExp('^([^0-9]*)$');
         var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
         if (regex.test(str)) {
@@ -1559,7 +1559,7 @@ function toggleIndividInfo1() {
 		$('.genderlabl').removeClass('inputFieldError');
 		$('#username').attr('placeholder',$('#username').attr('data-indEmail'));
 		$('#pincode').attr('placeholder',$('#pincode').attr('data-indPin'));
-		$('#instituteName1').hide();
+		$('#business_name1').hide();
 		$('.individ').show();
 		$('input[name=fullName]').focus();
 		$('#name1').show();
@@ -1572,8 +1572,8 @@ function toggleIndividInfo1() {
 		$('#pincode').attr('placeholder',$('#pincode').attr('data-insPin'));
 		$('#name1').hide();
 		$('#name2').show()
-		$('#instituteName1').show();
-		$('input[name=instiName]').focus();
+		$('#business_name1').show();
+		$('input[name=busi_name]').focus();
 		$('.individ').hide();
 		$('.genderDiv').hide();
 	}
