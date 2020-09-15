@@ -6386,7 +6386,7 @@ a.signUpNavButton:hover {
 
 .footernew {
     padding: 0 5%;
-    background: #fff;
+    background: #fed99b;
     margin-top: 10px;
 }
 
@@ -6615,7 +6615,7 @@ ul.extraFooterMenu li a {
 }
 
 .corporateFooter.footernew {
-    background: #fff;
+    background:  #fed99b;
     padding: 30px 0 10px;
     text-align: center;
 }
@@ -6652,7 +6652,7 @@ ul.extraFooterMenu li a {
         float: left;
         width: 100%;
         padding: 10px 0 0 0;
-        background-color: #f4f4f4;
+        background-color:  #fed99b;
     }
 
     .footer-social {
@@ -7753,7 +7753,7 @@ a.homeFeatBlock {
 }
 
 .footernew {
-    background-color: #dbebff;
+    background-color:  #fed99b;
 }
 
 .numbers {
