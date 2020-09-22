@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <meta http-equiv="content-type" content="text/html;charset=utf-8" /> -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#_linkTO_ASL_Logo.ico" type="image/x-icon" />
+  <!-- <link href="/css/all.css" rel="stylesheet">  -->
+  <!-- <link rel="stylesheet" href=""> -->
+  <!-- <script defer src="/js/all.js"></script>  -->
+  <!-- Internal Url : /login/auth -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  
+  <title>Login to your Account: AssistLnk.com</title>
+  <meta name="description" content="Login to your account and update your profile,portfolios etc" />
+  <meta name="keywords" content="AssistLnk login page" />
+  <link rel="canonical" href="https://www.AssistLnk.com/login" />
+
+  <script>
+    function loadCSS(href, before, media) {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+        hidePageLoader();
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    };
+
+    function hidePageLoader() {
+      setTimeout(function () {
+        document.getElementById('aslPageLoader').classList.add("fadeout");
+      }, 400);
+      setTimeout(function () {
+        document.getElementById('aslPageLoader').style.display = 'none';
+      }, 800)
+    }
+  </script>
+  <style type="text/css">
+    body {
+      background-color: rgb(243, 236, 236);
+      overflow-x: hidden;
+      margin: 0px;
+    }
+
+    .aslPageLoader {
+      position: fixed;
+      z-index: 100000;
+      background: rgba(231, 230, 230, 0.99);
+      width: 100%;
+      height: 100%;
+      display: none;
+      text-align: center;
+      top: 0px;
+    }
+
+    .aslPageLoaderContainer {
+      position: absolute;
+      margin: auto;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      width: 100px;
+      height: 100px;
+    }
+
+    #aslPageLoader.fadeout {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-name: fadeOut;
+      animation-name: fadeOut;
+    }
+
+    @-webkit-keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .uploaderAnim {
+      position: absolute;
+      box-sizing: border-box;
+      margin-top: 15px;
+      border-radius: 5px;
+      width: 100px;
+      height: 2px;
+      padding: 0px;
+      background: rgb(223, 217, 217);
+      overflow: hidden;
+      -webkit-transform: rotateY(0);
+      transform: rotateY(0);
+      transition: -webkit-transform .3s ease-in;
+      transition: transform .3s ease-in;
+      transition: transform .3s ease-in, -webkit-transform .3s ease-in;
+    }
+
+    .uploaderAnim:before {
+      content: '';
+      position: absolute;
+      border-radius: 5px;
+      width: 30px;
+      height: 3px;
+      left: 0;
+      background: #0072FF;
+      animation: animUploader 1.5s infinite ease-in-out;
+    }
+
+    @keyframes animUploader {
+
+      0%,
+      100% {
+        -webkit-transform: translate(-14px, 0);
+        transform: translate(-14px, 0);
+      }
+
+      50% {
+        -webkit-transform: translate(80px, 0);
+        transform: translate(80px, 0);
+      }
+    }
+
+    a,
+    body,
+    div,
+    html,
+    img,
+    li,
+    p,
+    ul {
+      font-size: 100%;
+      vertical-align: baseline;
+      background-color: transparent;
+      background-position: initial initial;
+      background-repeat: initial initial
+    }
+
+    a,
+    body,
+    html {
+      margin: 0;
+      padding: 0
+    }
+
+    :focus,
+    a {
+      outline: 0
+    }
+
+    body,
+    div,
+    html,
+    img,
+    li,
+    p,
+    ul {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: #000
+    }
+
+    a {
+      color: #0072ff;
+      text-decoration: none
+    }
+  </style>
+
+  <meta name="layout" content="standAloneFullPage" />
+  <meta name="description"
+    content="Login to your account, search home and other repaair services, hiring services etc." />
+  <link rel="stylesheet" href="/styles/login.css"/>
+  <script src="https://kit.fontawesome.com/5fa37f0665.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ 
+  <div class='dummyHeader'>
+  </div>
+  <div class='newTopHeader  '>
+    <div class="topHeaderMarginWidth">
+      <a href="../index.html" class="display-IB aslLogo">
+        <img src="#_source_to_asl_logo" width="164" alt="AssistLnk-logo" />
+        <span class="logo-menu-arrow"></span>
+      </a>
+      <nav class="seoLinksNav menuContainer-Js">
+        <ul class="navbar categoryNavbar">
+          <li>
+            <a href="javascript:void(0);" class="menuNav">Home Services</a>
+            <ul>
+              <li class="noBorder">
+                <p>Cleaning</p>
+                <a href="#">Fabric sofa shampooing</a>
+                <a href="#">Bathroom Deep cleaning</a>
+                <a href="#">Floor scrubbing and Polishing</a>
+                <a href="#">Home Painting</a>
+                <a href="#">Home Decor</a>
+              </li>
+
+              <li>
+                <p>Repairing/Installing</p>
+                <a href="#">Carpentry</a>
+                <a href="#">
+                </a>
+                <a href="#">Electrician</a>
+                <a href="#">Plumbing</a>
+                <a href="#">Masonary</a>
+              </li>
+              <li>
+                <p>Beauty</p>
+                <a href="#">Makeup Artist</a>
+                <a href="#">Hair stylist</a>
+                <a href="#">Saloon</a>
+                <a href="#">Nail Arts</a>
+                <a href="#">Facial Cleansing</a>
+              </li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="menuNav">Education</a>
+            <ul>
+              <li class="noBorder">
+                <p>School</p>
+                <a href="#">12th Standard Tuition</a>
+                <a href="#">11th Standard Tuition</a>
+                <a href="#">10th Standard Tuition</a>
+                <a href="#">9th StandardTuition</a>
+                <a href="#">8th Standard Tuition</a>
+              </li>
+              <li class="multiColumn">
+                <a href="#">7th Standard Tuition</a>
+                <a href="#">6th Standard Tuition</a>
+                <a href="#">1st-5th Standard Tuition</a>
+                <a href="#">Nursery-LKG-UKG Tuition</a>
+              </li>
+
+              <li>
+                <p>Subject</p>
+                <a href="#">Mathematics</a>
+                <a href="#">English</a>
+                <a href="#">Science</a>
+                <a href="#">Physics</a>
+                <a href="#">Chemistry</a>
+              </li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="menuNav">Media</a>
+            <ul>
+              <li>
+                <p>Photography/Videography</p>
+                <a href="#">Event Management</a>
+                <a href="#">Content Writing</a>
+                <a href="#">Sound System Hiring</a>
+                <a href="#">Graphics Design</a>
+                <a href="#">Web Design and Development</a>
+              </li>
+              <li>
+                <p>Desktop Publishing</p>
+                <a href="#">Documents/letters/Newsletter printing etc</a>
+                <a href="#">Flex Design & printing</a>
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+              </li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="menuNav">Appliances Repair</a>
+            <ul>
+              <li>
+                <p>Home appliances</p>
+                <a href="#">Fan/AC/Cooler</a>
+                <a href="#">Washing Machine</a>
+                <a href="#">Refrigerator</a>
+                <a href="#">Television</a>
+                <a href="#">Option 2</a>
+              </li>
+              <li>
+                <p>Hardware/Software</p>
+                <a href="#">Laptop/Desktop</a>
+                <a href="#">MacOS/Apple Devices</a>
+                <a href="#">Android</a>
+                <a href="#">iOS</a>
+                <a href="#">Software Installations</a>
+              </li>
+              <li>
+                <p>Misc. Repair services</p>
+                <a href="#">Cooler/AC</a>
+                <a href="#">Electric heater</a>
+                <a href="#">option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+              </li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="menuNav">Hiring services</a>
+            <ul>
+              <li>
+                <p>Media & Entertainment</p>
+                <a href="#">Sound system</a>
+                <a href="#">Music Artist</a>
+                <a href="#">Backup Dnacers</a>
+                <a href="#">Standup comedy</a>
+                <a href="#">Musicians</a>
+              </li>
+              <li>
+                <p>Vehicle Hiring</p>
+                <a href="#">2-wheeler</a>
+                <a href="#">4-Wheeler</a>
+                <a href="#">Luxury Bus</a>
+                <a href="#">Transportation Heavy Truck</a>
+                <a href="#">Pick-up 4X4 Truck</a>
+              </li>
+              <li>
+                <p>Other Hiring services</p>
+                <a href="#">Wedding Hall/Party Hall</a>
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+                <a href="#">Option 4</a>
+              </li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="menuNav">Leisure Services</a>
+            <ul>
+              <li>
+                <p>Dance & Music</p>
+                <a href="#">Dance</a>
+                <a href="#">Dirty Dancing</a>
+                <a href="#">Guitar</a>
+                <a href="#">HAO Music</a>
+                <a href="#">Keyboard</a>
+              </li>
+              <li>
+                <p>Hobbies</p>
+                <a href="#">Yoga</a>
+                <a href="#">Cooking</a>
+                <a href="#">Photography</a>
+                <a href="#">Drawing</a>
+                <a href="#">Painting</a>
+              </li>
+              <li>
+                <p>Other Hobbies</p>
+                <a href="#">Singing</a>
+                <a href="#">Violin</a>
+                <a href="#">Piano</a>
+                <a href="#">Makeup</a>
+                <a href="#">Handwriting</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <img src="/assets/icons/search-circle-sharp.png" width="28px" height="28px"
+          class="search-header menuHoverIcon" />
+        <span class="hamburgerContainer menuHoverIcon"><span class="hamburgerMenuIcon"></span></span>
+      </nav>
+    </div>
+  </div>
+  <div class="searchHeaderOverlay">
+  </div>
+
+  <!--Left  maburger nav starts-->
+  <div class="leftNavigationSeo menuContainer-Js headerRightStickyNav navigationLinkForUser">
+
+    <div class="menuNavigationLinks">
+      <p class="locationInMenu">Location <span class="headerCityName">Set your Location</span></p>
+      <a href="/reg_log/login.html" absolute="true">Login</a>
+
+      <a href="#">Write a Review</a>
+      <a href="#" absolute="true">All Categories</a>
+
+
+      <a href="#" target="_blank">Help Center</a>
+
+    </div>
+
+    <div class="menuFooter">
+      <a href="#" class="postNeedNavButton" absolute="true">Tell us your<span> needs</span> and requirements.</a>
+
+      <a href="/reg_log/register.html" id="134847" pageTracking="true" class="signUpNavButton"
+        absolute="true">Signup<span> as</span>
+        Professional/Service Provider</a>
+
+    </div>
+  </div>
+  <!--Left hamburger Nav ends here-->
+
+  <!--Left Search location starts-->
+  <div class="locationSearchHeader menuContainer-Js headerRightStickyNav">
+    <div class="searchCategoryHeaderContainer">
+      <span class="transformIconHolder menuHoverIcon closeNav"><span class="closeIcon"></span></span>
+      <input type="text" class="searchCategoryHeader locationHeaderAutocomplete" placeholder="Search for your City" />
+      <span class="searchIconHeaderTxt"></span>
+      <span class="closeSearchHeader">&#10005;</span>
+    </div>
+    <div class="locationSearchResult">
+
+    </div>
+    <div class="popularLocation">
+      <p>Popular Cities/Towns</p>
+      <a href="javascript:void(0);">Imphal</a>
+      <a href="javascript:void(0);">Ukhrul</a>
+      <a href="javascript:void(0);">Shillong</a>
+      <a href="javascript:void(0);">Guwahati</a>
+      <a href="javascript:void(0);">Aizawl</a>
+      <a href="javascript:void(0);">Gangtok</a>
+      <a href="javascript:void(0);">Kohima</a>
+      <a href="javascript:void(0);">Dimapur</a>
+      <a href="javascript:void(0);">Dispur</a>
+      <a href="javascript:void(0);">Itanagar</a>
+      <a href="javascript:void(0);">Siliguri</a>
+      <a href="javascript:void(0);">Darjeeling</a>
+      <a href="javascript:void(0);">Thoubal</a>
+    </div>
+  </div>
+  <!--Left Search location ends-->
+
+  <!--Popular search category starts-->
+  <div class="searchNavigationHeader menuContainer-Js headerRightStickyNav">
+    <div class="searchCategoryHeaderContainer">
+      <span class="transformIconHolder menuHoverIcon closeNav"><span class="closeIcon"></span></span>
+      <input type="text" class="searchCategoryHeader searchHeaderAutocomplete"
+        placeholder="Search for categories,services etc." />
+      <span class="searchIconHeaderTxt"></span>
+      <span class="closeSearchHeader">&#10005;</span>
+    </div>
+    <div class="searchHeaderResult">
+
+    </div>
+
+    <div class="popularCategory">
+      <p>Popular Services</p>
+      <a href="#">Vehicle Hiring</a>
+      <a href="#">Makeup Artist</a>
+      <a href="#">Television Repairs</a>
+      <a href="#">Carpentry</a>
+      <a href="#">Plumbing</a>
+      <a href="#">Photographer</a>
+      <a href="#">Content Writer</a>
+      <a href="#">Electrician</a>
+      <a href="#">Mobile Repair</a>
+      <a href="#">Pianist</a>
+      <a href="#">KungFU</a>
+    </div>
+
+    <form method="POST" action="#" class="searchHeaderForm">
+      <input type="hidden" name="uniqueId" class="searchUniqueId" />
+    </form>
+  </div>
+  <!--Popular search category ends here-->
+
+ <!-- body begins here -->
+  <div class="clearfix clearLeft" style="width:100% !important;">
+
+    <div class="fullScreenContainer">
+     
+      <div class="g23 minHeight500" style="width:100%;">
+        <div style="padding: 10px;">
+        </div>
+        <div class="mob-cont">
+           <form action="/" class="login">
+            <header>Login</header>
+            <div class="field"><span class="fa fa-user"></span><input type="text" placeholder="Email or User Name"></div>
+            <div class="field"><span class="fa fa-lock"></span><input type="password" placeholder="Password"></div>
+            <div class="forgot-password"><a href="/">Forgot password?</a></div>
+            <input type="submit" class="submit" value="LOGIN"></input>
+            <span class="login-form-copy">Or login with</span>
+            <div class="social-icons">
+              <div class="social-icon facebook"><i class="fa fa-facebook"></i></div>      
+             <div class="social-icon google"><i class="fa fa-google"></i></div>
+             <div class="social-icon linkedin"><i class="fa fa-linkedin"></i></div>
+              
+            </div>
+          <span class="logn-form-copy">Don't have an account? <a href="register.html" class="login-form__sign-up">Sign up</a></span>
+          </form> 
+    
+          <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit" async defer> -->
+          </script>
+
+        </div>
+      </div> 
+      
+    </div> 
+
+
+    <script type="text/javascript"
+      src="/js/login.js"></script>
+
+    <script type="text/javascript">
+      var facebookAppId = 000000304040;
+      var facebookAuthNextUrl = 'https://www.assistLnk.com/register/enrollViaFacebook';
+    </script>
+  </div>
+  <!-- body ends here -->
+
+  <div class="footernew">
+    <div class="footerMarginWidth">
+      <div class="footerNSocial clearfix">
+        <ul class="footermenuhori floatLeft">
+          <li>
+
+            <a href="#">About AssistLnk.com</a>
+
+          </li>
+          <li>
+
+            <a href="#">Terms of Use</a>
+
+          </li>
+          <li>
+            <a href="#">Privacy Policy</a>
+
+          </li>
+        </ul>
+        <ul class="footer-social" itemscope itemtype="http://schema.org/Organization">
+          <span itemprop="name" class="none">AssistLnk</span>
+          <link itemprop="url" href="index.html" />
+          <img itemprop="logo" class="none" src="#AssistLnk-logo_source" />
+
+          <li><a itemprop="sameAs" href="#" target="_blank">
+              <span class="fa fa-facebook"></span></a></li>
+          <li><a itemprop="sameAs" href="#" target="_blank">
+              <span class="fa fa-linkedin"></span></a>
+          </li>
+        </ul>
+      </div>
+      <ul class="footermenuhori hideForListingBlock">
+        <li><a href="#">Shillong</a></li>
+        <li><a href="#">Guwahati</a></li>
+        <li><a href="#">Imphal</a></li>
+        <li><a href="#">Aizawl</a></li>
+        <li><a href="#">Dimapur</a></li>
+        <li><a href="#">Kohima</a></li>
+        <li><a href="#">Dispur</a></li>
+        <li><a href="#">Itanagar</a></li>
+        <li><a href="#">Ukhrul</a></li>
+        <li><a href="#">Darjeeling</a></li>
+        <li><a href="#">Siliguri</a></li>
+        <li><a href="#">Agartala</a></li>
+      </ul>
+
+      <p class="footerUpTxt hideForListingBlock ">AssistLnk.com is NorthEast India&#x00027;s largest network of verified
+        Professionals
+        and trusted service providers. Over 10+ lakh students,homeowners and businesses rely on AssistLnk.com, to
+        fulfill their
+        requirements across 1,000+ categories. Using AssistLnk.com, students,homeowners and business dealers can compare
+        multiple service providers and professionals and choose the one that best suits their requirements. <span
+          class="readmoreTxt"> More than 1.6+ lakh verified Experts/Professionals and service providers are helping
+          millions of
+          people every day and growing their business and portfolio on AssistLnk.com. Whether you are looking
+          for any appliances repair, a carpenter, a makeup artist, a tutor, a professional photographer, or hire a
+          vehicle,
+          we have got the best selection of Experts/Professionals and
+          Service providers for you.</span> <span class="showFooterTxt" data-type="more">Read
+          more</span></p>
+      <div class="footer-copyright">AssistLink Group &copy; 2019-2020 All Rights Reserved</div>
+    </div>
+
+  </div>
+  <form action="https://www.assistLnk.com/general/redirectToUrl" method="POST" id="seoFormSubmit" style="display: none;">
+    <input type="hidden" name="redirectUrl" class="redirectUrl" />
+  </form>
+
+  <div class="d-cont-foot" style="text-decoration:none !important;">
+
+  </div>
+  </div>
+
+</body>
+
+</html>
