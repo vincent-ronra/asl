@@ -528,9 +528,9 @@
         <div class="mob-cont">
            <form action="/" class="login">
             <header>Login</header>
-            <div  class="alert" id="alert-msg">Invalid Email address</div>
+            <!-- <div  class="alert" id="alert-msg">Invalid Email address</div> -->
             <div class="field"><span class="fa fa-user"></span><input type="text" name="email" onblur="validateEmail(this.value);" placeholder="Email"></div>
-            
+            <p class="errorText" id="error-msg"></p>
             <div class="field"><span class="fa fa-lock"></span><input type="password" placeholder="Password"></div>
             <div class="forgot-password"><a href="/">Forgot password?</a></div>
             <input type="submit" class="submit" value="LOGIN"></input>
