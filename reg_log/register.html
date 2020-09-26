@@ -224,12 +224,13 @@
 															class="inputField   " />
 													</div>
 													<div class="input-control">
-														<input type="text" id="username" name='username'
-															placeholder="Enter your Email Eg: avi@gmail.com"
+														<input type="text" id="email-id" name='username'
+														onblur="validateEmail(this.value);"	
+														placeholder="Enter your Email Eg: avi@gmail.com"
 															data-indEmail="Enter your Email Eg: avi@gmail.com"
 															data-insEmail="Enter your Email Eg: haoyap@gmail.com" value=""
-															class="inputField " />
-														<p class="errorText"></p>
+															class="inputField" />
+														<p class="errorText" id="error-msg"></p>
 													</div>
 													<div class="input-control" style="position:relative;">
 														<div class="displayFlex">
@@ -239,7 +240,7 @@
 															</select>
 															<span id="result">&nbsp;</span>
 															<input type="number" name="MOBILE"
-																placeholder="Enter your Mobile Number" maxlength="10"
+																placeholder="Mobile Number e.g. 8921342134" maxlength="10"
 																value="" title=""
 																class="inputField phoneNumberValue onlyNumber " />
 														</div>

@@ -231,7 +231,7 @@
   <meta name="description"
     content="Login to your account, search home and other repaair services, hiring services etc." />
   <link rel="stylesheet" href="/styles/login.css"/>
-  <script src="https://kit.fontawesome.com/5fa37f0665.js" crossorigin="anonymous"></script>
+  <script src="/css/font-awesome.js" crossorigin="anonymous"></script>
 </head>
 <body>
  
@@ -528,7 +528,9 @@
         <div class="mob-cont">
            <form action="/" class="login">
             <header>Login</header>
-            <div class="field"><span class="fa fa-user"></span><input type="text" placeholder="Email or User Name"></div>
+            <div  class="alert" id="alert-msg">Invalid Email address</div>
+            <div class="field"><span class="fa fa-user"></span><input type="text" name="email" onblur="validateEmail(this.value);" placeholder="Email"></div>
+            
             <div class="field"><span class="fa fa-lock"></span><input type="password" placeholder="Password"></div>
             <div class="forgot-password"><a href="/">Forgot password?</a></div>
             <input type="submit" class="submit" value="LOGIN"></input>

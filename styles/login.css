@@ -9747,3 +9747,9 @@ input:focus, input:active, input:hover {
   background-color: #2867B2;
 }
 .fa { font-family: 'FontAwesome' !important; }
+
+#alert-msg{
+    display: none;
+    color:rgb(12, 4, 4);
+    padding:0;
+}
